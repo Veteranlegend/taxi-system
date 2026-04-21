@@ -1,0 +1,1 @@
+export type SupportedService = "local" | "airport";

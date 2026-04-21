@@ -1,0 +1,1 @@
+export type ZoneSlug = "tripoli" | "batroun" | "beirut";
