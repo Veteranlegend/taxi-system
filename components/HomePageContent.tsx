@@ -25,7 +25,7 @@ export default function HomePageContent() {
     <ScrollRestorer />
     <HubPageLayout
       title="Direct Taxi Lebanon"
-      description="Fast WhatsApp taxi requests for airport transfers, intercity rides, and local pickups across Lebanon. Choose the service area that best matches your route and continue in a simple, direct booking flow."
+      description={t.heroDescription}
     >
 
       {/* HOW IT WORKS */}

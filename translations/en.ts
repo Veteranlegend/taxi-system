@@ -20,6 +20,9 @@ const en = {
   checkPrice: "Check price →",
   callToConfirm: "Call to confirm",
 
+  // Hero
+  heroDescription: "Fast WhatsApp taxi requests for airport transfers, intercity rides, and local pickups across Lebanon. Choose the service area that best matches your route and continue in a simple, direct booking flow.",
+
   // Hero trust pills
   trustPills: [
     "15+ years experience",
