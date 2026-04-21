@@ -33,7 +33,7 @@ export default function FAQSection() {
   return (
     <section className="mt-16">
       <div className="mb-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
           {t.faqLabel}
         </p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900">

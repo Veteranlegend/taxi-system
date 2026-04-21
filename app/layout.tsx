@@ -94,7 +94,7 @@ export default function RootLayout({
         <LanguageProvider>
           <HtmlDir />
           <JsonLd />
-          {children}
+          <main className="flex-1">{children}</main>
           <Footer />
           <FloatingWhatsApp />
           <LanguageToggle />

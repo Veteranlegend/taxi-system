@@ -30,7 +30,7 @@ export default function HomePageContent() {
 
       {/* HOW IT WORKS */}
       <div className="mb-10 px-2">
-        <p className="mb-8 text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+        <p className="mb-8 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
           {t.howItWorksLabel}
         </p>
         <div className="grid gap-6 sm:grid-cols-3">
@@ -107,7 +107,7 @@ export default function HomePageContent() {
             <h2 className="mt-4 text-2xl font-bold tracking-tight text-white sm:text-3xl">
               {t.privateToursTitle}
             </h2>
-            <p className="mt-4 text-base leading-7 text-slate-400">
+            <p className="mt-4 text-base leading-7 text-slate-500">
               {t.privateToursDescription}
             </p>
             <p className="mt-7 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">

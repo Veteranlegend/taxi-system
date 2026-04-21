@@ -53,7 +53,7 @@ export default function HubLinkCard({
           <div className="flex flex-1 flex-col justify-between gap-5 p-4 sm:p-6">
 
             <div>
-              <div className="inline-flex rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400">
+              <div className="inline-flex rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500">
                 {t.serviceAreaBadge}
               </div>
 

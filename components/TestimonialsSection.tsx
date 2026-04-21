@@ -189,7 +189,7 @@ export default function TestimonialsSection() {
   return (
     <section className="mt-16">
       <div className="mb-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
           {t.testimonialsLabel}
         </p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900">
@@ -218,7 +218,7 @@ export default function TestimonialsSection() {
                 />
                 <div>
                   <p className="text-sm font-semibold text-slate-900">{testimonial.name}</p>
-                  <p className="text-xs text-slate-400">{testimonial.location}</p>
+                  <p className="text-xs text-slate-500">{testimonial.location}</p>
                 </div>
               </div>
             </div>

@@ -63,7 +63,7 @@ export default function LandingPageLayout({
                 {title}
               </h1>
 
-              <p className="mt-3 max-w-xl text-[15px] leading-7 text-white/70 sm:text-base">
+              <p className="mt-3 max-w-xl text-[15px] leading-7 text-white/85 sm:text-base">
                 {description}
               </p>
             </div>

@@ -83,7 +83,7 @@ export default function ZoneLandingPage({
             {/* 1. Message preview + integrated note */}
             <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
               <div className="px-4 pt-4 pb-3">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {t.yourWhatsappMessage}
                 </p>
                 <p className="mt-2 whitespace-pre-line text-sm leading-6 text-slate-600">
@@ -106,7 +106,7 @@ export default function ZoneLandingPage({
               <div>
                 <p className="text-sm font-semibold text-slate-800">
                   {t.shareLocation}
-                  <span className="ms-1.5 text-xs font-normal text-slate-400">{t.recommended}</span>
+                  <span className="ms-1.5 text-xs font-normal text-slate-500">{t.recommended}</span>
                 </p>
                 <p className="mt-0.5 text-xs text-slate-500">
                   {t.helpsDriver}

@@ -35,7 +35,7 @@ export default function ZoneCard({ zone }: ZoneCardProps) {
 
         {/* Message preview */}
         <div className="mt-4 rounded-2xl bg-slate-50 p-4">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
             Your WhatsApp message
           </p>
           <p className="mt-2 max-h-24 overflow-y-auto whitespace-pre-line text-sm leading-6 text-slate-600">

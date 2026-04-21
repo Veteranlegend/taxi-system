@@ -102,8 +102,8 @@ export default function PriceEstimator({
                 {vm.rangeLabel}
               </p>
             </div>
-            <p className="mt-2 text-xs text-slate-400">{vm.distanceLabel}</p>
-            <p className="mt-3 text-xs leading-5 text-slate-400">
+            <p className="mt-2 text-xs text-slate-500">{vm.distanceLabel}</p>
+            <p className="mt-3 text-xs leading-5 text-slate-500">
               {vm.disclaimer}
             </p>
           </div>

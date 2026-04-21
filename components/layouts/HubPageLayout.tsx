@@ -63,7 +63,7 @@ export default function HubPageLayout({
                   {title}
                 </h1>
 
-                <p className="mt-4 max-w-xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
+                <p className="mt-4 max-w-xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
                   {description}
                 </p>
 
@@ -96,13 +96,13 @@ export default function HubPageLayout({
                     </svg>
                     +961 70 452 864
                   </a>
-                  <span className="text-white/30">·</span>
+                  <span className="text-white/60">·</span>
                   <span className="text-xs font-semibold text-white/90">{t.available24_7}</span>
                 </div>
 
                 <div className="mt-7 grid grid-cols-2 gap-2">
                   {t.trustPills.map((label) => (
-                    <span key={label} className="rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/80 backdrop-blur-sm">
+                    <span key={label} className="rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/90 backdrop-blur-sm">
                       {label}
                     </span>
                   ))}
