@@ -64,7 +64,7 @@ export default function HubPageLayout({
                   {title}
                 </h1>
 
-                <p className="mt-4 max-w-xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
+                <p className="mt-4 max-w-xl text-base leading-7 text-white sm:text-lg sm:leading-8 [text-shadow:0_1px_4px_rgba(0,0,0,0.6)]">
                   {description}
                 </p>
 
