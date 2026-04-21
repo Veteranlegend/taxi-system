@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Direct Taxi Lebanon
 
-## Getting Started
+A production taxi lead-generation system built for a private driver operating across Lebanon. Converts search traffic into WhatsApp bookings through a structured, conversion-optimised flow.
 
-First, run the development server:
+**Live site:** [directtaxilebanon.com](https://www.directtaxilebanon.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Overview
+
+Customers land on the site, select their service area, fill in trip details, and are routed directly to WhatsApp with a pre-filled booking message — no app, no dispatcher, no friction.
+
+The system supports airport transfers, intercity rides, and private tours across Beirut, Tripoli, Batroun and surrounding areas.
+
+---
+
+## Features
+
+- **WhatsApp booking flow** — pre-filled messages with zone, destination, notes and price estimate
+- **Price estimator** — distance-based fare calculator with route lookup
+- **Arabic / English** — full bilingual support with RTL layout switching
+- **Zone-based routing** — each city has its own landing page and booking flow
+- **SEO optimised** — 100/100 SEO on PageSpeed Insights, FAQPage JSON-LD schema, per-page OpenGraph images
+- **Performance** — 95/100 Performance score on mobile (PageSpeed Insights)
+- **Google Ads integration** — conversion tracking tag installed, campaign running
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 15 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Deployment | Vercel |
+| i18n | Custom typed translation system |
+| Analytics | Google Ads conversion tracking |
+
+---
+
+## Architecture
+
+```
+config/          — static data (zones, prices, routes)
+constants/       — routes, WhatsApp message templates
+types/           — shared TypeScript types
+services/        — business logic (zone lookup, WhatsApp URL builder)
+viewModels/      — UI-ready data transformations
+components/      — UI components (no business logic)
+app/             — Next.js pages (thin composition layer)
+translations/    — en.ts + ar.ts with full type safety
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Strict separation of concerns: no business logic in components, no direct config access from UI.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Pages
 
-## Learn More
+| Route | Description |
+|---|---|
+| `/` | Homepage with service area selector |
+| `/beirut-taxi` | Beirut zone landing page |
+| `/tripoli-taxi` | Tripoli zone landing page |
+| `/batroun-taxi` | Batroun zone landing page |
+| `/airport-transfer-north-lebanon` | Airport transfer hub for North Lebanon |
+| `/price-estimate` | Standalone fare estimator |
+| `/request` | Generic ride request form |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Performance
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Tested on PageSpeed Insights (mobile, April 2026):
 
-## Deploy on Vercel
+- Performance: **95 / 100**
+- Accessibility: **96 / 100**
+- Best Practices: **100 / 100**
+- SEO: **100 / 100**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000)
