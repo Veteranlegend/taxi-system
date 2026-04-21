@@ -43,7 +43,8 @@ export default function LandingPageLayout({
                 alt={`${title} — Direct Taxi Lebanon`}
                 fill
                 className="object-cover object-center"
-                sizes="100vw"
+                sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 960px"
+                quality={75}
                 priority
               />
             ) : (

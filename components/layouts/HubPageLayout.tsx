@@ -44,7 +44,8 @@ export default function HubPageLayout({
               alt="Rawshe Rock, Beirut — Direct Taxi Lebanon"
               fill
               className="object-cover object-[center_30%]"
-              sizes="100vw"
+              sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 960px"
+              quality={75}
               priority
             />
 
