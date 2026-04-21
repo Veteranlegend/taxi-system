@@ -8,10 +8,16 @@ export type PriceEstimateViewModel = {
   disclaimer: string;
 };
 
-const TRIP_TYPE_LABELS: Record<TripType, string> = {
+const TRIP_TYPE_LABELS_EN: Record<TripType, string> = {
   local:      "Local ride",
   intercity:  "Intercity",
   airport:    "Airport transfer",
+};
+
+const TRIP_TYPE_LABELS_AR: Record<TripType, string> = {
+  local:      "رحلة محلية",
+  intercity:  "بين المدن",
+  airport:    "نقل مطار",
 };
 
 const TRIP_TYPE_BADGE_STYLES: Record<TripType, string> = {
@@ -21,14 +27,20 @@ const TRIP_TYPE_BADGE_STYLES: Record<TripType, string> = {
 };
 
 export const PriceEstimateViewModelMapper = {
-  toViewModel(estimate: PriceEstimate): PriceEstimateViewModel {
+  toViewModel(estimate: PriceEstimate, lang?: string): PriceEstimateViewModel {
+    const isAr = lang === "ar";
     return {
       rangeLabel:       `$${estimate.minPrice} – $${estimate.maxPrice}`,
-      distanceLabel:    `~${estimate.distanceKm} km by road`,
-      tripTypeLabel:    TRIP_TYPE_LABELS[estimate.tripType],
+      distanceLabel:    isAr
+        ? `~${estimate.distanceKm} كم بالطريق`
+        : `~${estimate.distanceKm} km by road`,
+      tripTypeLabel:    isAr
+        ? TRIP_TYPE_LABELS_AR[estimate.tripType]
+        : TRIP_TYPE_LABELS_EN[estimate.tripType],
       tripTypeBadgeStyle: TRIP_TYPE_BADGE_STYLES[estimate.tripType],
-      disclaimer:
-        "Approximate only. Final price depends on traffic, waiting time, and luggage. Confirm with driver via WhatsApp.",
+      disclaimer:       isAr
+        ? "تقريبي فقط. السعر النهائي يعتمد على حركة المرور ووقت الانتظار. تأكيد مع السائق عبر واتساب."
+        : "Approximate only. Final price depends on traffic and waiting time. Confirm with driver via WhatsApp.",
     };
   },
 };

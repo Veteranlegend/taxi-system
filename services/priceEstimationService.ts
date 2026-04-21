@@ -6,17 +6,31 @@ import type { PricingLocation, PriceEstimate, TripType } from "@/types/pricing";
 // ---------------------------------------------------------------------------
 
 export const PRICING_LOCATIONS: PricingLocation[] = [
-  { id: "tripoli",  label: "Tripoli",           lat: 34.4367, lng: 35.8497, isAirport: false },
+  // Far North
+  { id: "akkar",    label: "Akkar (Halba)",      lat: 34.5483, lng: 36.0786, isAirport: false },
+  { id: "dinniyeh", label: "Dinniyeh",           lat: 34.4200, lng: 36.0900, isAirport: false },
+  // North Lebanon
+  { id: "tripoli",  label: "Tripoli",            lat: 34.4367, lng: 35.8497, isAirport: false },
   { id: "mina",     label: "Mina (Tripoli)",     lat: 34.4397, lng: 35.8237, isAirport: false },
   { id: "zgharta",  label: "Zgharta",            lat: 34.3997, lng: 35.8928, isAirport: false },
+  { id: "ehden",    label: "Ehden / Bcharre",    lat: 34.3028, lng: 35.9578, isAirport: false },
   { id: "chekka",   label: "Chekka",             lat: 34.3150, lng: 35.7350, isAirport: false },
   { id: "batroun",  label: "Batroun",            lat: 34.2569, lng: 35.6600, isAirport: false },
+  // Mount Lebanon
   { id: "byblos",   label: "Byblos (Jbeil)",     lat: 34.1217, lng: 35.6486, isAirport: false },
   { id: "jounieh",  label: "Jounieh",            lat: 33.9817, lng: 35.6186, isAirport: false },
+  { id: "faraya",   label: "Faraya",             lat: 34.0028, lng: 35.9039, isAirport: false },
+  // Beirut
   { id: "beirut",   label: "Beirut",             lat: 33.8886, lng: 35.4955, isAirport: false },
   { id: "airport",  label: "Beirut Airport",     lat: 33.8209, lng: 35.4884, isAirport: true  },
-  { id: "faraya",   label: "Faraya",             lat: 34.0028, lng: 35.9039, isAirport: false },
-  { id: "ehden",    label: "Ehden / Bcharre",    lat: 34.3028, lng: 35.9578, isAirport: false },
+  // South Lebanon
+  { id: "sidon",    label: "Sidon (Saida)",      lat: 33.5633, lng: 35.3706, isAirport: false },
+  { id: "tyre",     label: "Tyre (Sour)",        lat: 33.2705, lng: 35.2037, isAirport: false },
+  { id: "nabatieh", label: "Nabatieh",           lat: 33.3778, lng: 35.4839, isAirport: false },
+  // Bekaa Valley
+  { id: "zahle",    label: "Zahle",              lat: 33.8461, lng: 35.9016, isAirport: false },
+  { id: "chtaura",  label: "Chtaura",            lat: 33.8139, lng: 35.8592, isAirport: false },
+  { id: "baalbek",  label: "Baalbek",            lat: 34.0042, lng: 36.2117, isAirport: false },
 ];
 
 // ---------------------------------------------------------------------------
@@ -84,6 +98,70 @@ const ROAD_DISTANCES_KM: Record<string, number> = {
   "airport|faraya":    65,
   "airport|ehden":    120,
   "beirut|ehden":     100,
+
+  // Akkar
+  "akkar|tripoli":     42,
+  "akkar|mina":        44,
+  "akkar|zgharta":     38,
+  "akkar|dinniyeh":    30,
+  "akkar|chekka":      58,
+  "akkar|batroun":     68,
+  "akkar|beirut":     130,
+  "akkar|airport":    140,
+  "akkar|ehden":       55,
+
+  // Dinniyeh
+  "dinniyeh|tripoli":  25,
+  "dinniyeh|mina":     27,
+  "dinniyeh|zgharta":  20,
+  "dinniyeh|chekka":   40,
+  "dinniyeh|batroun":  50,
+  "dinniyeh|beirut":  115,
+  "dinniyeh|airport": 125,
+  "dinniyeh|ehden":    30,
+
+  // South Lebanon
+  "beirut|sidon":      40,
+  "airport|sidon":     45,
+  "jounieh|sidon":     58,
+  "byblos|sidon":      78,
+  "batroun|sidon":    100,
+  "tripoli|sidon":    128,
+  "mina|sidon":       128,
+
+  "beirut|tyre":       85,
+  "airport|tyre":      90,
+  "sidon|tyre":        45,
+  "jounieh|tyre":     103,
+  "tripoli|tyre":     170,
+
+  "beirut|nabatieh":   65,
+  "airport|nabatieh":  70,
+  "sidon|nabatieh":    28,
+  "tyre|nabatieh":     35,
+
+  // Bekaa Valley
+  "beirut|zahle":      52,
+  "airport|zahle":     60,
+  "jounieh|zahle":     65,
+  "byblos|zahle":      75,
+  "batroun|zahle":     90,
+  "tripoli|zahle":     95,
+  "mina|zahle":        95,
+  "sidon|zahle":       80,
+
+  "beirut|chtaura":    48,
+  "airport|chtaura":   55,
+  "zahle|chtaura":     10,
+
+  "beirut|baalbek":    86,
+  "airport|baalbek":   90,
+  "zahle|baalbek":     35,
+  "chtaura|baalbek":   42,
+  "tripoli|baalbek":   70,
+  "mina|baalbek":      72,
+  "akkar|baalbek":     85,
+  "dinniyeh|baalbek":  55,
 };
 
 // ---------------------------------------------------------------------------

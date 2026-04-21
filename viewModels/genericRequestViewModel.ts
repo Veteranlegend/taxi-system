@@ -7,6 +7,7 @@ export type GenericRequestInput = {
   estimatedRange?: string;
   note?: string;
   pickupLink?: string;
+  lang?: string;
 };
 
 export type GenericRequestViewModel = {
@@ -22,6 +23,7 @@ export class GenericRequestViewModelMapper {
       estimatedRange: input.estimatedRange,
       note: input.note,
       pickupLink: input.pickupLink,
+      lang: input.lang,
     });
 
     return {

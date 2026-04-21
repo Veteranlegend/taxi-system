@@ -8,6 +8,7 @@ export type ZoneInquiryInput = {
   destinationCity?: string;
   note?: string;
   pickupLink?: string;
+  lang?: string;
 };
 
 export type ZoneViewModel = {
@@ -31,6 +32,7 @@ export class ZoneViewModelMapper {
         destinationCity: input?.destinationCity,
         note: input?.note,
         pickupLink: input?.pickupLink,
+        lang: input?.lang,
       }
     );
 

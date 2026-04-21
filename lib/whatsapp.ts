@@ -1,6 +1,6 @@
 const WHATSAPP_BASE_URL = "https://wa.me";
 
-const PHONE_NUMBER = "4527184800"; 
+const PHONE_NUMBER = "96170452864";
 // Replace with your real number later (Lebanon format without +)
 
 export function buildWhatsAppUrl(message: string): string {
