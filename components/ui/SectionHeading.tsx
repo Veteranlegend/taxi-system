@@ -9,6 +9,7 @@ export default function SectionHeading({ title }: SectionHeadingProps) {
         fontSize: "20px",
         fontWeight: 700,
         marginBottom: "12px",
+        color: "#0f172a",
       }}
     >
       {title}
