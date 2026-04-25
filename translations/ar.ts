@@ -11,7 +11,7 @@ const ar: Translations = {
   shareLocation: "شارك موقعك",
   helpsDriver: "يساعد السائق على إيجادك بسهولة.",
   locationAdded: "✓ تمت الإضافة",
-  share: "شارك",
+  share: "شارك موقعك",
   from: "من",
   to: "إلى",
   selectPickup: "اختر نقطة الانطلاق",
