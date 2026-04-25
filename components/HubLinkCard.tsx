@@ -40,7 +40,7 @@ export default function HubLinkCard({ title, href }: HubLinkCardProps) {
             <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-3.5 sm:p-4">
               <div className="flex flex-wrap gap-2">
                 <span className="rounded-full bg-white px-3 py-1 text-xs font-medium text-slate-600 ring-1 ring-slate-200">
-                  Fast request
+                  Experienced drivers
                 </span>
                 <span className="rounded-full bg-white px-3 py-1 text-xs font-medium text-slate-600 ring-1 ring-slate-200">
                   Direct WhatsApp

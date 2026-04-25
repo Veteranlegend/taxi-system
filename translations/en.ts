@@ -56,7 +56,7 @@ const en = {
   serviceAreaBadge: "Service area",
   cardDescription: "Choose this page if it best matches your pickup area or route, then continue with a direct WhatsApp taxi request.",
   chooseArea: "Choose area",
-  fastRequest: "Fast request",
+  fastRequest: "Experienced drivers",
   directWhatsApp: "Direct WhatsApp",
   easyStart: "Quick booking",
 

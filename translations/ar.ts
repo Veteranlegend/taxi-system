@@ -58,7 +58,7 @@ const ar: Translations = {
   serviceAreaBadge: "منطقة الخدمة",
   cardDescription: "اختر هذه الصفحة إذا كانت تناسب منطقة انطلاقك أو مسارك، ثم تابع مع طلب تاكسي مباشر عبر واتساب.",
   chooseArea: "اختر المنطقة",
-  fastRequest: "طلب سريع",
+  fastRequest: "سائقون ذوو خبرة",
   directWhatsApp: "واتساب مباشر",
   easyStart: "حجز سريع",
 
