@@ -38,8 +38,18 @@ export const ZONE_PAGES = {
   },
 } as const satisfies Record<string, ZonePageDefinition>;
 
+export const BEIRUT_AIRPORT_PAGE: ZonePageDefinition = {
+  title: "Beirut Airport Taxi",
+  description: "Fast airport pickups and drop-offs. Book via WhatsApp — available 24/7.",
+  href: ROUTES.BEIRUT_AIRPORT_TAXI,
+  slug: "beirut" as ZoneSlug,
+  image: "/images/beirut.jpg",
+  gradient: "from-sky-500 via-blue-600 to-indigo-700",
+};
+
 export const ZONE_PAGE_LIST: ZonePageDefinition[] = [
   ZONE_PAGES.TRIPOLI,
   ZONE_PAGES.BATROUN,
   ZONE_PAGES.BEIRUT,
+  BEIRUT_AIRPORT_PAGE,
 ];
