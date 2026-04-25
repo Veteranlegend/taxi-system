@@ -43,7 +43,7 @@ export const BEIRUT_AIRPORT_PAGE: ZonePageDefinition = {
   description: "Fast airport pickups and drop-offs. Book via WhatsApp — available 24/7.",
   href: ROUTES.BEIRUT_AIRPORT_TAXI,
   slug: "beirut" as ZoneSlug,
-  image: "/images/beirut.jpg",
+  image: "/images/airport.jpg",
   gradient: "from-sky-500 via-blue-600 to-indigo-700",
 };
 

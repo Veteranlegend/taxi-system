@@ -14,7 +14,7 @@ export default function BeirutAirportTaxiContent() {
     <LandingPageLayout
       title={t.airportPageTitle}
       description={t.airportPageDescription}
-      image="/images/beirut.jpg"
+      image="/images/airport.jpg"
     >
       <div className="space-y-10">
 

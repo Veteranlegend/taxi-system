@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://www.directtaxilebanon.com/beirut-airport-taxi",
     images: [
       {
-        url: "/images/beirut.jpg",
+        url: "/images/airport.jpg",
         width: 1200,
         height: 630,
         alt: "Beirut Airport Taxi — Direct Taxi Lebanon",
