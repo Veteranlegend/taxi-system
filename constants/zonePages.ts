@@ -39,7 +39,7 @@ export const ZONE_PAGES = {
 } as const satisfies Record<string, ZonePageDefinition>;
 
 export const BEIRUT_AIRPORT_PAGE: ZonePageDefinition = {
-  title: "Beirut Airport Taxi",
+  title: "Beirut Airport Transfers",
   description: "Fast airport pickups and drop-offs. Book via WhatsApp — available 24/7.",
   href: ROUTES.BEIRUT_AIRPORT_TAXI,
   slug: "beirut" as ZoneSlug,
@@ -48,8 +48,8 @@ export const BEIRUT_AIRPORT_PAGE: ZonePageDefinition = {
 };
 
 export const ZONE_PAGE_LIST: ZonePageDefinition[] = [
-  ZONE_PAGES.TRIPOLI,
-  ZONE_PAGES.BATROUN,
-  ZONE_PAGES.BEIRUT,
   BEIRUT_AIRPORT_PAGE,
+  ZONE_PAGES.BEIRUT,
+  ZONE_PAGES.BATROUN,
+  ZONE_PAGES.TRIPOLI,
 ];
