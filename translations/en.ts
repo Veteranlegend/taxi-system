@@ -171,6 +171,28 @@ const en = {
     { label: "All areas in Lebanon", href: "/request" },
   ],
 
+  // Jbeil (Byblos) Taxi page
+  jbeilPageTitle: "Jbeil Taxi — Byblos",
+  jbeilPageDescription: "Fast, reliable taxi service to and from Jbeil (Byblos) — available 24/7. Airport transfers, intercity rides, and private tours. Book directly via WhatsApp.",
+  jbeilBenefitsLabel: "Why book with us",
+  jbeilBenefits: [
+    { title: "Airport Transfers", body: "Direct rides between Jbeil and Beirut Rafic Hariri International Airport." },
+    { title: "Fixed Pricing", body: "Know your price before you travel — no hidden fees, no surprises." },
+    { title: "Reliable Drivers", body: "15+ years of experience serving travelers across Lebanon." },
+    { title: "Available 24/7", body: "Early pickups, late arrivals — we're always on time." },
+  ] as { title: string; body: string }[],
+  jbeilRoutesLabel: "Popular Routes",
+  jbeilRoutes: [
+    { from: "Jbeil (Byblos)", to: "Beirut Airport", message: "Hello, I'd like to book a taxi from Jbeil (Byblos) to Beirut Airport." },
+    { from: "Jbeil (Byblos)", to: "Beirut City", message: "Hello, I'd like to book a taxi from Jbeil (Byblos) to Beirut City." },
+    { from: "Jbeil (Byblos)", to: "Tripoli", message: "Hello, I'd like to book a taxi from Jbeil (Byblos) to Tripoli." },
+  ] as { from: string; to: string; message: string }[],
+  jbeilBookRoute: "Book this route",
+  jbeilCtaTitle: "Ready to book?",
+  jbeilCtaBody: "Send us a message on WhatsApp and we'll confirm your ride within minutes.",
+  jbeilBookNow: "Book Jbeil Taxi via WhatsApp",
+  jbeilGeneralMessage: "Hello, I'd like to book a taxi to/from Jbeil (Byblos).",
+
   // Beirut Airport Taxi page
   airportPageTitle: "Beirut Airport Taxi",
   airportPageDescription: "Fast, reliable taxi service to and from Beirut Rafic Hariri International Airport — available 24/7 across all of Lebanon. Book directly via WhatsApp in seconds.",

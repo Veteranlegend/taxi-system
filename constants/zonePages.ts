@@ -47,9 +47,19 @@ export const BEIRUT_AIRPORT_PAGE: ZonePageDefinition = {
   gradient: "from-sky-500 via-blue-600 to-indigo-700",
 };
 
+export const JBEIL_PAGE: ZonePageDefinition = {
+  title: "Jbeil Taxi — Byblos",
+  description: "Taxi service to and from Jbeil (Byblos). Airport transfers and intercity rides.",
+  href: ROUTES.JBEIL_TAXI,
+  slug: "beirut" as ZoneSlug,
+  image: "/images/jbeil.jpg",
+  gradient: "from-emerald-400 via-teal-500 to-cyan-600",
+};
+
 export const ZONE_PAGE_LIST: ZonePageDefinition[] = [
   BEIRUT_AIRPORT_PAGE,
   ZONE_PAGES.BEIRUT,
+  JBEIL_PAGE,
   ZONE_PAGES.BATROUN,
   ZONE_PAGES.TRIPOLI,
 ];
