@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function BeirutAirportTaxiContent() {
-  const { t } = useLanguage();
+  const { t, isArabic } = useLanguage();
 
   const generalWhatsAppUrl = buildWhatsAppUrl(t.airportGeneralMessage);
 
@@ -51,7 +51,7 @@ export default function BeirutAirportTaxiContent() {
                 >
                   <div className="flex items-center gap-3">
                     <span className="text-sm font-semibold text-slate-900">{from}</span>
-                    <span className="text-slate-400">→</span>
+                    <span className="text-slate-400">{isArabic ? "←" : "→"}</span>
                     <span className="text-sm font-semibold text-slate-900">{to}</span>
                   </div>
                   <a
