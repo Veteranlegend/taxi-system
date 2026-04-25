@@ -52,7 +52,7 @@ const en = {
 
   // Service areas
   chooseServiceArea: "Choose Your Service Area",
-  serviceAreasDescription: "We cover trips across Lebanon — choose the area closest to your location.",
+  serviceAreasDescription: "We cover trips across Lebanon — choose the area closest to your location or destination.",
   serviceAreaBadge: "Service area",
   cardDescription: "Choose this page if it best matches your pickup area or route, then continue with a direct WhatsApp taxi request.",
   chooseArea: "Choose area",

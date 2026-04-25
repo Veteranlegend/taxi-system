@@ -54,7 +54,7 @@ const ar: Translations = {
 
   // Service areas
   chooseServiceArea: "اختر منطقة الخدمة",
-  serviceAreasDescription: "نغطي الرحلات في جميع أنحاء لبنان — اختر المنطقة الأقرب إلى موقعك.",
+  serviceAreasDescription: "نغطي الرحلات في جميع أنحاء لبنان — اختر المنطقة الأقرب إلى موقعك أو وجهتك.",
   serviceAreaBadge: "منطقة الخدمة",
   cardDescription: "اختر هذه الصفحة إذا كانت تناسب منطقة انطلاقك أو مسارك، ثم تابع مع طلب تاكسي مباشر عبر واتساب.",
   chooseArea: "اختر المنطقة",
