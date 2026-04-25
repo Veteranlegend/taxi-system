@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import WhatsAppTracker from "@/components/WhatsAppTracker";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -98,6 +99,7 @@ export default function RootLayout({
         <LanguageProvider>
           <HtmlDir />
           <JsonLd />
+          <WhatsAppTracker />
           <main className="flex-1">{children}</main>
           <Footer />
           <FloatingWhatsApp />
