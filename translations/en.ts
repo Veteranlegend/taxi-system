@@ -170,6 +170,28 @@ const en = {
     { label: "Beirut", href: "/beirut-taxi" },
     { label: "All areas in Lebanon", href: "/request" },
   ],
+
+  // Beirut Airport Taxi page
+  airportPageTitle: "Beirut Airport Taxi",
+  airportPageDescription: "Fast, reliable taxi service to and from Beirut Rafic Hariri International Airport — available 24/7 across all of Lebanon. Book directly via WhatsApp in seconds.",
+  airportBenefitsLabel: "Why book with us",
+  airportBenefits: [
+    { title: "Airport Transfers", body: "Reliable pickups and drop-offs at Beirut Rafic Hariri Airport." },
+    { title: "Fixed Pricing", body: "Know your price before you travel — no hidden fees, no surprises." },
+    { title: "Reliable Drivers", body: "15+ years of experience serving travelers across Lebanon." },
+    { title: "Available 24/7", body: "Early flights, late arrivals — we're always on time." },
+  ] as { title: string; body: string }[],
+  airportRoutesLabel: "Popular Routes",
+  airportRoutes: [
+    { from: "Beirut Airport", to: "Beirut City", message: "Hello, I'd like to book a taxi from Beirut Airport to Beirut City." },
+    { from: "Beirut Airport", to: "Jounieh", message: "Hello, I'd like to book a taxi from Beirut Airport to Jounieh." },
+    { from: "Beirut Airport", to: "Byblos (Jbeil)", message: "Hello, I'd like to book a taxi from Beirut Airport to Byblos (Jbeil)." },
+  ] as { from: string; to: string; message: string }[],
+  airportBookRoute: "Book this route",
+  airportCtaTitle: "Ready to book?",
+  airportCtaBody: "Send us a message on WhatsApp and we'll confirm your airport taxi within minutes.",
+  airportBookNow: "Book Airport Taxi via WhatsApp",
+  airportGeneralMessage: "Hello, I'd like to book a taxi to/from Beirut Airport.",
 };
 
 export type Translations = typeof en;
