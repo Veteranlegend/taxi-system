@@ -7,30 +7,48 @@ import type { PricingLocation, PriceEstimate, TripType } from "@/types/pricing";
 
 export const PRICING_LOCATIONS: PricingLocation[] = [
   // Far North
-  { id: "akkar",    label: "Akkar (Halba)",      lat: 34.5483, lng: 36.0786, isAirport: false },
-  { id: "dinniyeh", label: "Dinniyeh",           lat: 34.4200, lng: 36.0900, isAirport: false },
+  { id: "akkar",     label: "Akkar (Halba)",       lat: 34.5483, lng: 36.0786, isAirport: false },
+  { id: "dinniyeh",  label: "Dinniyeh",            lat: 34.4200, lng: 36.0900, isAirport: false },
   // North Lebanon
-  { id: "tripoli",  label: "Tripoli",            lat: 34.4367, lng: 35.8497, isAirport: false },
-  { id: "mina",     label: "Mina (Tripoli)",     lat: 34.4397, lng: 35.8237, isAirport: false },
-  { id: "zgharta",  label: "Zgharta",            lat: 34.3997, lng: 35.8928, isAirport: false },
-  { id: "ehden",    label: "Ehden / Bcharre",    lat: 34.3028, lng: 35.9578, isAirport: false },
-  { id: "chekka",   label: "Chekka",             lat: 34.3150, lng: 35.7350, isAirport: false },
-  { id: "batroun",  label: "Batroun",            lat: 34.2569, lng: 35.6600, isAirport: false },
-  // Mount Lebanon
-  { id: "byblos",   label: "Byblos (Jbeil)",     lat: 34.1217, lng: 35.6486, isAirport: false },
-  { id: "jounieh",  label: "Jounieh",            lat: 33.9817, lng: 35.6186, isAirport: false },
-  { id: "faraya",   label: "Faraya",             lat: 34.0028, lng: 35.9039, isAirport: false },
+  { id: "tripoli",   label: "Tripoli",             lat: 34.4367, lng: 35.8497, isAirport: false },
+  { id: "mina",      label: "Mina (Tripoli)",      lat: 34.4397, lng: 35.8237, isAirport: false },
+  { id: "zgharta",   label: "Zgharta",             lat: 34.3997, lng: 35.8928, isAirport: false },
+  { id: "ehden",     label: "Ehden / Bcharre",     lat: 34.3028, lng: 35.9578, isAirport: false },
+  { id: "koura",     label: "Koura",               lat: 34.2700, lng: 35.7800, isAirport: false },
+  { id: "chekka",    label: "Chekka",              lat: 34.3150, lng: 35.7350, isAirport: false },
+  { id: "batroun",   label: "Batroun",             lat: 34.2569, lng: 35.6600, isAirport: false },
+  // Mount Lebanon — North
+  { id: "byblos",    label: "Byblos (Jbeil)",      lat: 34.1217, lng: 35.6486, isAirport: false },
+  { id: "bikfaya",   label: "Bikfaya",             lat: 33.9200, lng: 35.6900, isAirport: false },
+  { id: "ghazir",    label: "Ghazir / Sarba",      lat: 33.9800, lng: 35.6300, isAirport: false },
+  { id: "jounieh",   label: "Jounieh",             lat: 33.9817, lng: 35.6186, isAirport: false },
+  { id: "faraya",    label: "Faraya",              lat: 34.0028, lng: 35.9039, isAirport: false },
+  // Mount Lebanon — Metn
+  { id: "antelias",  label: "Antelias / Dbayeh",   lat: 33.9000, lng: 35.5800, isAirport: false },
+  { id: "broummana", label: "Broummana / Beit Mery",lat: 33.8700, lng: 35.6200, isAirport: false },
+  // Mount Lebanon — South
+  { id: "aley",      label: "Aley",                lat: 33.8100, lng: 35.5900, isAirport: false },
+  { id: "chouf",     label: "Chouf / Deir el Qamar",lat: 33.6900, lng: 35.5800, isAirport: false },
+  { id: "jezzine",   label: "Jezzine",             lat: 33.5400, lng: 35.5800, isAirport: false },
+  { id: "damour",    label: "Damour",              lat: 33.7300, lng: 35.4400, isAirport: false },
   // Beirut
-  { id: "beirut",   label: "Beirut",             lat: 33.8886, lng: 35.4955, isAirport: false },
-  { id: "airport",  label: "Beirut Airport",     lat: 33.8209, lng: 35.4884, isAirport: true  },
+  { id: "beirut",    label: "Beirut",              lat: 33.8886, lng: 35.4955, isAirport: false },
+  { id: "airport",   label: "Beirut Airport",      lat: 33.8209, lng: 35.4884, isAirport: true  },
   // South Lebanon
-  { id: "sidon",    label: "Sidon (Saida)",      lat: 33.5633, lng: 35.3706, isAirport: false },
-  { id: "tyre",     label: "Tyre (Sour)",        lat: 33.2705, lng: 35.2037, isAirport: false },
-  { id: "nabatieh", label: "Nabatieh",           lat: 33.3778, lng: 35.4839, isAirport: false },
+  { id: "sidon",     label: "Sidon (Saida)",       lat: 33.5633, lng: 35.3706, isAirport: false },
+  { id: "tyre",      label: "Tyre (Sour)",         lat: 33.2705, lng: 35.2037, isAirport: false },
+  { id: "nabatieh",  label: "Nabatieh",            lat: 33.3778, lng: 35.4839, isAirport: false },
+  { id: "marjeyoun", label: "Marjeyoun",           lat: 33.3600, lng: 35.5900, isAirport: false },
+  { id: "bintjbeil", label: "Bint Jbeil",          lat: 33.1200, lng: 35.4300, isAirport: false },
+  { id: "hasbaya",   label: "Hasbaya",             lat: 33.4000, lng: 35.6900, isAirport: false },
   // Bekaa Valley
-  { id: "zahle",    label: "Zahle",              lat: 33.8461, lng: 35.9016, isAirport: false },
-  { id: "chtaura",  label: "Chtaura",            lat: 33.8139, lng: 35.8592, isAirport: false },
-  { id: "baalbek",  label: "Baalbek",            lat: 34.0042, lng: 36.2117, isAirport: false },
+  { id: "aanjar",    label: "Aanjar",              lat: 33.7300, lng: 35.9300, isAirport: false },
+  { id: "chtaura",   label: "Chtaura",             lat: 33.8139, lng: 35.8592, isAirport: false },
+  { id: "zahle",     label: "Zahle",               lat: 33.8461, lng: 35.9016, isAirport: false },
+  { id: "baalbek",   label: "Baalbek",             lat: 34.0042, lng: 36.2117, isAirport: false },
+  { id: "hermel",    label: "Hermel",              lat: 34.3900, lng: 36.3800, isAirport: false },
+  { id: "rachaya",   label: "Rachaya",             lat: 33.5000, lng: 35.8600, isAirport: false },
+  { id: "yammouneh", label: "Yammouneh",           lat: 34.0700, lng: 36.0400, isAirport: false },
 ];
 
 // ---------------------------------------------------------------------------
@@ -41,13 +59,18 @@ export const PRICING_LOCATIONS: PricingLocation[] = [
 
 const ROAD_DISTANCES_KM: Record<string, number> = {
   // North Lebanon internal
-  "mina|tripoli":       5,
-  "tripoli|zgharta":   12,
-  "mina|zgharta":      13,
-  "chekka|tripoli":    20,
-  "chekka|mina":       21,
-  "chekka|zgharta":    25,
-  "batroun|chekka":    10,
+  "mina|tripoli":          5,
+  "tripoli|zgharta":      12,
+  "mina|zgharta":         13,
+  "chekka|tripoli":       20,
+  "chekka|mina":          21,
+  "chekka|zgharta":       25,
+  "batroun|chekka":       10,
+  "koura|tripoli":        18,
+  "koura|mina":           19,
+  "chekka|koura":         12,
+  "batroun|koura":        20,
+  "koura|zgharta":        22,
 
   // North → Batroun
   "batroun|mina":      29,
@@ -154,14 +177,94 @@ const ROAD_DISTANCES_KM: Record<string, number> = {
   "airport|chtaura":   55,
   "zahle|chtaura":     10,
 
-  "beirut|baalbek":    86,
-  "airport|baalbek":   90,
-  "zahle|baalbek":     35,
-  "chtaura|baalbek":   42,
-  "tripoli|baalbek":   70,
-  "mina|baalbek":      72,
-  "akkar|baalbek":     85,
-  "dinniyeh|baalbek":  55,
+  "beirut|baalbek":       86,
+  "airport|baalbek":      90,
+  "zahle|baalbek":        35,
+  "chtaura|baalbek":      42,
+  "tripoli|baalbek":      70,
+  "mina|baalbek":         72,
+  "akkar|baalbek":        85,
+  "dinniyeh|baalbek":     55,
+
+  // Mount Lebanon — Metn / new areas
+  "antelias|beirut":      12,
+  "airport|antelias":     22,
+  "antelias|jounieh":     10,
+  "antelias|byblos":      32,
+  "antelias|batroun":     52,
+  "antelias|tripoli":     78,
+
+  "broummana|beirut":     18,
+  "airport|broummana":    28,
+  "broummana|jounieh":    15,
+  "broummana|zahle":      40,
+
+  "bikfaya|beirut":       28,
+  "airport|bikfaya":      38,
+  "bikfaya|jounieh":      18,
+  "bikfaya|byblos":       28,
+  "bikfaya|zahle":        35,
+
+  "ghazir|beirut":        22,
+  "airport|ghazir":       30,
+  "ghazir|jounieh":        5,
+  "byblos|ghazir":        20,
+
+  // Aley / Chouf / Damour
+  "aley|beirut":          20,
+  "airport|aley":         25,
+  "aley|sidon":           40,
+  "airport|damour":       18,
+  "beirut|damour":        22,
+  "damour|sidon":         22,
+
+  "airport|chouf":        48,
+  "beirut|chouf":         50,
+  "chouf|sidon":          30,
+  "aley|chouf":           30,
+
+  "airport|jezzine":      65,
+  "beirut|jezzine":       70,
+  "jezzine|sidon":        30,
+  "chouf|jezzine":        25,
+  "jezzine|nabatieh":     28,
+
+  // South Lebanon — new
+  "airport|marjeyoun":   115,
+  "beirut|marjeyoun":    120,
+  "marjeyoun|nabatieh":   30,
+  "marjeyoun|tyre":       50,
+  "hasbaya|marjeyoun":    25,
+  "airport|hasbaya":     105,
+  "beirut|hasbaya":      110,
+  "hasbaya|sidon":        65,
+
+  "airport|bintjbeil":   120,
+  "beirut|bintjbeil":    125,
+  "bintjbeil|tyre":       25,
+  "bintjbeil|nabatieh":   35,
+
+  // Bekaa — new
+  "airport|aanjar":       62,
+  "beirut|aanjar":        55,
+  "aanjar|chtaura":       14,
+  "aanjar|zahle":         20,
+
+  "airport|rachaya":      90,
+  "beirut|rachaya":       95,
+  "rachaya|sidon":        80,
+  "rachaya|zahle":        50,
+  "rachaya|hasbaya":      40,
+
+  "airport|yammouneh":    85,
+  "beirut|yammouneh":     88,
+  "yammouneh|baalbek":    25,
+  "yammouneh|zahle":      30,
+
+  "airport|hermel":      155,
+  "beirut|hermel":       160,
+  "baalbek|hermel":       68,
+  "tripoli|hermel":      100,
 };
 
 // ---------------------------------------------------------------------------
@@ -213,7 +316,7 @@ const PRICING_CONFIG = {
 // Distance helpers
 // ---------------------------------------------------------------------------
 
-const MOUNTAIN_LOCATIONS = new Set(["faraya", "ehden"]);
+const MOUNTAIN_LOCATIONS = new Set(["faraya", "ehden", "broummana", "bikfaya", "jezzine", "rachaya", "yammouneh"]);
 
 function haversineKm(lat1: number, lng1: number, lat2: number, lng2: number): number {
   const R = 6371;
