@@ -68,9 +68,29 @@ export default function HubPageLayout({
                   {description}
                 </p>
 
-                <p className="mt-3 flex items-center gap-2 text-sm text-white/70">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-4 w-4 shrink-0 text-white/60" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                <p className="mt-3 flex items-center gap-2 text-sm text-white/75">
+                  <svg viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-auto shrink-0">
+                    {/* Taxi sign on roof */}
+                    <rect x="12" y="0" width="12" height="5" rx="1.5" fill="#FBBF24"/>
+                    <text x="18" y="4.2" textAnchor="middle" fontSize="3.2" fontWeight="900" fontFamily="Arial" fill="#0f172a">TAXI</text>
+                    {/* Car body */}
+                    <rect x="2" y="10" width="32" height="10" rx="2.5" fill="#FBBF24"/>
+                    {/* Roof */}
+                    <path d="M10 10 L13 5 L23 5 L26 10 Z" fill="#FBBF24"/>
+                    {/* Windshield */}
+                    <path d="M11.5 10 L14 6 L22 6 L24.5 10 Z" fill="#0f172a" opacity="0.35"/>
+                    {/* Left wheel */}
+                    <circle cx="9" cy="20" r="3.5" fill="#1e293b"/>
+                    <circle cx="9" cy="20" r="1.8" fill="#475569"/>
+                    {/* Right wheel */}
+                    <circle cx="27" cy="20" r="3.5" fill="#1e293b"/>
+                    <circle cx="27" cy="20" r="1.8" fill="#475569"/>
+                    {/* Headlight */}
+                    <rect x="2.5" y="13" width="4" height="2.5" rx="1" fill="#FEF08A"/>
+                    {/* Taillight */}
+                    <rect x="29.5" y="13" width="4" height="2.5" rx="1" fill="#FCA5A5"/>
+                    {/* Door line */}
+                    <line x1="18" y1="10.5" x2="18" y2="19.5" stroke="#d97706" strokeWidth="0.8"/>
                   </svg>
                   {isArabic
                     ? "بيروت · جبيل · البترون · طرابلس · وكل لبنان"
