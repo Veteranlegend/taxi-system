@@ -60,7 +60,7 @@ const ar: Translations = {
   chooseArea: "اختر المنطقة",
   fastRequest: "طلب سريع",
   directWhatsApp: "واتساب مباشر",
-  easyStart: "بداية سهلة",
+  easyStart: "حجز سريع",
 
   // Other areas card
   allOfLebanon: "كل لبنان",

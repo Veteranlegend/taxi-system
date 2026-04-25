@@ -58,7 +58,7 @@ const en = {
   chooseArea: "Choose area",
   fastRequest: "Fast request",
   directWhatsApp: "Direct WhatsApp",
-  easyStart: "Easy start",
+  easyStart: "Quick booking",
 
   // Other areas card
   allOfLebanon: "All of Lebanon",

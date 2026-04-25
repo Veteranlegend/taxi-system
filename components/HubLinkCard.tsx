@@ -46,7 +46,7 @@ export default function HubLinkCard({ title, href }: HubLinkCardProps) {
                   Direct WhatsApp
                 </span>
                 <span className="rounded-full bg-white px-3 py-1 text-xs font-medium text-slate-600 ring-1 ring-slate-200">
-                  Easy start
+                  Quick booking
                 </span>
               </div>
             </div>
