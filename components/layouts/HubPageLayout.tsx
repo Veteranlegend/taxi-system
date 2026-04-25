@@ -95,6 +95,20 @@ export default function HubPageLayout({
                   {isArabic
                     ? "بيروت · جبيل · البترون · طرابلس · وكل لبنان"
                     : "Beirut · Jbeil · Batroun · Tripoli · and all of Lebanon"}
+                  <svg viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-auto shrink-0">
+                    <rect x="12" y="0" width="12" height="5" rx="1.5" fill="#FBBF24"/>
+                    <text x="18" y="4.2" textAnchor="middle" fontSize="3.2" fontWeight="900" fontFamily="Arial" fill="#0f172a">TAXI</text>
+                    <rect x="2" y="10" width="32" height="10" rx="2.5" fill="#FBBF24"/>
+                    <path d="M10 10 L13 5 L23 5 L26 10 Z" fill="#FBBF24"/>
+                    <path d="M11.5 10 L14 6 L22 6 L24.5 10 Z" fill="#0f172a" opacity="0.35"/>
+                    <circle cx="9" cy="20" r="3.5" fill="#1e293b"/>
+                    <circle cx="9" cy="20" r="1.8" fill="#475569"/>
+                    <circle cx="27" cy="20" r="3.5" fill="#1e293b"/>
+                    <circle cx="27" cy="20" r="1.8" fill="#475569"/>
+                    <rect x="2.5" y="13" width="4" height="2.5" rx="1" fill="#FEF08A"/>
+                    <rect x="29.5" y="13" width="4" height="2.5" rx="1" fill="#FCA5A5"/>
+                    <line x1="18" y1="10.5" x2="18" y2="19.5" stroke="#d97706" strokeWidth="0.8"/>
+                  </svg>
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
