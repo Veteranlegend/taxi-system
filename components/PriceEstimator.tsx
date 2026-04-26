@@ -7,17 +7,19 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 type PriceEstimatorProps = {
   defaultFromId?: string;
+  defaultToId?: string;
   continuePath?: string;
   onDestinationChange?: (label: string) => void;
 };
 
 export default function PriceEstimator({
   defaultFromId,
+  defaultToId,
   onDestinationChange,
 }: PriceEstimatorProps) {
   const locations = PriceEstimationService.getLocations();
   const [fromId, setFromId] = useState(defaultFromId ?? "");
-  const [toId, setToId] = useState("");
+  const [toId, setToId] = useState(defaultToId ?? "");
   const { t, lang } = useLanguage();
 
   const vm = useMemo(() => {

@@ -43,7 +43,7 @@ export default function BeirutAirportTaxiContent() {
         <div className="grid gap-5 lg:grid-cols-2">
 
           <PriceEstimator
-            defaultFromId="airport"
+            defaultToId="airport"
             onDestinationChange={(label) => setDestinationCity(label)}
           />
 
