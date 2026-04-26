@@ -142,8 +142,8 @@ export default function HubPageLayout({
                     <line x1="18" y1="10.5" x2="18" y2="19.5" stroke="#d97706" strokeWidth="0.8"/>
                   </svg>
                   {isArabic
-                    ? "بيروت · جبيل · البترون · طرابلس · وكل لبنان"
-                    : "Beirut · Jbeil · Batroun · Tripoli · and all of Lebanon"}
+                    ? "مطار بيروت · بيروت · جبيل · البترون · طرابلس · وكل لبنان"
+                    : "Beirut Airport · Beirut · Jbeil · Batroun · Tripoli · and all of Lebanon"}
                   <svg viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-auto shrink-0">
                     <rect x="12" y="0" width="12" height="5" rx="1.5" fill="#FBBF24"/>
                     <text x="18" y="4.2" textAnchor="middle" fontSize="3.2" fontWeight="900" fontFamily="Arial" fill="#0f172a">TAXI</text>
@@ -175,6 +175,12 @@ export default function HubPageLayout({
                     className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
                   >
                     {t.getPriceEstimate}
+                  </ScrollSaveLink>
+                  <ScrollSaveLink
+                    href="/beirut-airport-taxi"
+                    className="inline-flex items-center gap-2 rounded-full border border-sky-400/40 bg-sky-500/20 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-sky-500/30"
+                  >
+                    ✈ {isArabic ? "تاكسي المطار" : "Airport Taxi"}
                   </ScrollSaveLink>
                 </div>
 
