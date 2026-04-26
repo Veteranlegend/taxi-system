@@ -40,7 +40,7 @@ export default function HubPageLayout({
         <header className="relative mb-10 overflow-hidden rounded-[2rem] shadow-[0_16px_56px_rgba(15,23,42,0.18)]">
           <div className="relative min-h-[500px] flex items-end sm:min-h-[540px] lg:min-h-[580px]">
             <Image
-              src="/images/hero-rawshe.jpg"
+              src="/images/alrawshe.jpeg"
               alt="Rawshe Rock, Beirut — Direct Taxi Lebanon"
               fill
               className="object-cover object-[center_30%]"
