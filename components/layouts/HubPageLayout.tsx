@@ -53,7 +53,7 @@ export default function HubPageLayout({
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
 
             {/* Lebanon map — real outline from mapsicon/djaiss, flag colors clipped inside */}
-            <div className="absolute right-[4%] top-1/2 -translate-y-[50%] pointer-events-none hidden lg:block opacity-[0.22]">
+            <div className="absolute right-[4%] top-1/2 -translate-y-[50%] pointer-events-none hidden lg:block opacity-[0.48]">
               <svg
                 viewBox="0 0 1024 1024"
                 className="h-60 w-auto xl:h-72"
