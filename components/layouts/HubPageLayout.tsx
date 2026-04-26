@@ -52,6 +52,38 @@ export default function HubPageLayout({
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/55 to-slate-900/15" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
 
+            {/* Lebanon map — soft decorative overlay */}
+            <div className="absolute right-[6%] top-1/2 -translate-y-[52%] pointer-events-none hidden lg:block">
+              <svg
+                viewBox="0 0 100 165"
+                className="h-64 w-auto xl:h-72"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient id="lebaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="white" stopOpacity="0.22" />
+                    <stop offset="100%" stopColor="#fbbf24" stopOpacity="0.06" />
+                  </linearGradient>
+                  <filter id="lebaGlow" x="-30%" y="-30%" width="160%" height="160%">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+                <path
+                  d="M 15,2 L 88,8 L 92,35 L 90,80 L 85,130 L 78,162 L 55,165 L 32,162 L 20,158 L 10,148 L 6,132 L 4,110 L 6,92 L 8,75 L 10,55 L 12,38 L 14,20 Z"
+                  fill="url(#lebaGrad)"
+                  stroke="white"
+                  strokeWidth="1"
+                  strokeOpacity="0.18"
+                  filter="url(#lebaGlow)"
+                />
+              </svg>
+            </div>
+
             <div className="relative w-full p-7 sm:p-10 lg:p-14">
               <div className="max-w-2xl">
 
