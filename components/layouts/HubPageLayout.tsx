@@ -60,7 +60,7 @@ export default function HubPageLayout({
                   <WhatsAppIcon className="h-3.5 w-3.5" />
                 </div>
 
-                <h1 className="mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                <h1 className="mt-5 text-5xl font-black tracking-tight sm:text-6xl lg:text-7xl bg-gradient-to-r from-white via-white to-amber-300 bg-clip-text text-transparent">
                   {title}
                 </h1>
 
