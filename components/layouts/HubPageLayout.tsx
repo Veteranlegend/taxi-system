@@ -103,7 +103,17 @@ export default function HubPageLayout({
                     return (
                       <>
                         {prefix}{" "}
-                        <span style={{ color: "#FBBF24" }}>{taxi}</span>
+                        <span
+                          className="inline-block rounded-[0.12em] px-[0.22em] pb-[0.06em]"
+                          style={{
+                            backgroundColor: "#FBBF24",
+                            color: "#1e293b",
+                            border: "2.5px solid #d97706",
+                            boxShadow: "0 0 18px rgba(251,191,36,0.55), inset 0 1px 0 rgba(255,255,255,0.25)",
+                          }}
+                        >
+                          {taxi}
+                        </span>
                         {" "}
                         <span
                           className="inline-block bg-clip-text text-transparent"
