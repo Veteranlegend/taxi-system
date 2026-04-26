@@ -52,34 +52,60 @@ export default function HubPageLayout({
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/55 to-slate-900/15" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
 
-            {/* Lebanon map — soft decorative overlay */}
-            <div className="absolute right-[6%] top-1/2 -translate-y-[52%] pointer-events-none hidden lg:block">
+            {/* Lebanon map — flag silhouette */}
+            <div className="absolute right-[4%] top-1/2 -translate-y-[50%] pointer-events-none hidden lg:block">
               <svg
-                viewBox="0 0 100 165"
-                className="h-64 w-auto xl:h-72"
-                fill="none"
+                viewBox="0 0 100 240"
+                className="h-60 w-auto xl:h-72"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <defs>
-                  <linearGradient id="lebaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="white" stopOpacity="0.22" />
-                    <stop offset="100%" stopColor="#fbbf24" stopOpacity="0.06" />
-                  </linearGradient>
-                  <filter id="lebaGlow" x="-30%" y="-30%" width="160%" height="160%">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur" />
-                    <feMerge>
-                      <feMergeNode in="blur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
+                  <clipPath id="lbShape">
+                    {/*
+                      Lebanon outline — clockwise from NW coast.
+                      Proportions: ~100 wide × 240 tall (≈ 1:2.4, matches real geography).
+                      West coast on left (x≈5–18), east border on right (x≈80–96),
+                      Akkar bulge curves north at top, Ras Beirut slight westward dip (x≈4) mid-coast.
+                    */}
+                    <path d="
+                      M 12,24
+                      L 20,19
+                      C 42,12 66,6  86,15
+                      L 96,22
+                      L 95,42
+                      C 93,68 91,92 88,116
+                      C 86,136 83,152 80,170
+                      C 77,187 73,202 69,220
+                      L 62,230
+                      L 50,235
+                      L 36,232
+                      L 24,228
+                      L 17,220
+                      C 11,205 8,188 7,170
+                      C 6,155 5,144 4,132
+                      L 4,126
+                      C 5,116 7,106 9,93
+                      C 11,78 13,62 13,48
+                      C 12,38 12,30 12,24
+                      Z
+                    " />
+                  </clipPath>
                 </defs>
+
+                {/* Flag bands clipped to Lebanon shape */}
+                <g clipPath="url(#lbShape)">
+                  <rect x="-5" y="-5"  width="115" height="88"  fill="#C8102E" fillOpacity="0.55" />
+                  <rect x="-5" y="83"  width="115" height="74"  fill="white"   fillOpacity="0.18" />
+                  <rect x="-5" y="157" width="115" height="93"  fill="#C8102E" fillOpacity="0.55" />
+                </g>
+
+                {/* Crisp outline */}
                 <path
-                  d="M 15,2 L 88,8 L 92,35 L 90,80 L 85,130 L 78,162 L 55,165 L 32,162 L 20,158 L 10,148 L 6,132 L 4,110 L 6,92 L 8,75 L 10,55 L 12,38 L 14,20 Z"
-                  fill="url(#lebaGrad)"
+                  d="M 12,24 L 20,19 C 42,12 66,6 86,15 L 96,22 L 95,42 C 93,68 91,92 88,116 C 86,136 83,152 80,170 C 77,187 73,202 69,220 L 62,230 L 50,235 L 36,232 L 24,228 L 17,220 C 11,205 8,188 7,170 C 6,155 5,144 4,132 L 4,126 C 5,116 7,106 9,93 C 11,78 13,62 13,48 C 12,38 12,30 12,24 Z"
+                  fill="none"
                   stroke="white"
-                  strokeWidth="1"
-                  strokeOpacity="0.18"
-                  filter="url(#lebaGlow)"
+                  strokeWidth="0.7"
+                  strokeOpacity="0.35"
                 />
               </svg>
             </div>
