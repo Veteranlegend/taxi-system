@@ -97,11 +97,14 @@ export default function HubPageLayout({
                 <h1 className="mt-5 text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl">
                   {(() => {
                     const words = title.split(" ");
-                    const last  = words[words.length - 1];
-                    const rest  = words.slice(0, -1).join(" ");
+                    const last   = words[words.length - 1];
+                    const taxi   = words[words.length - 2];
+                    const prefix = words.slice(0, -2).join(" ");
                     return (
                       <>
-                        {rest}{" "}
+                        {prefix}{" "}
+                        <span style={{ color: "#FBBF24" }}>{taxi}</span>
+                        {" "}
                         <span
                           className="inline-block bg-clip-text text-transparent"
                           style={{ backgroundImage: "linear-gradient(to bottom, #C8102E 0%, #C8102E 33%, #ffffff 50%, #006633 67%, #006633 100%)" }}
