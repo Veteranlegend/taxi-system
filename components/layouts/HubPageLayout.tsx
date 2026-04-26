@@ -92,8 +92,23 @@ export default function HubPageLayout({
                   <WhatsAppIcon className="h-3.5 w-3.5" />
                 </div>
 
-                <h1 className="mt-5 text-5xl font-black tracking-tight sm:text-6xl lg:text-7xl bg-gradient-to-r from-white via-white to-amber-300 bg-clip-text text-transparent">
-                  {title}
+                <h1 className="mt-5 text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl">
+                  {(() => {
+                    const words = title.split(" ");
+                    const last  = words[words.length - 1];
+                    const rest  = words.slice(0, -1).join(" ");
+                    return (
+                      <>
+                        {rest}{" "}
+                        <span
+                          className="inline-block bg-clip-text text-transparent"
+                          style={{ backgroundImage: "linear-gradient(to bottom, #C8102E 0%, #C8102E 33%, #ffffff 50%, #006633 67%, #006633 100%)" }}
+                        >
+                          {last}
+                        </span>
+                      </>
+                    );
+                  })()}
                 </h1>
 
                 <p className="mt-4 max-w-xl text-base leading-7 text-white sm:text-lg sm:leading-8 [text-shadow:0_1px_4px_rgba(0,0,0,0.6)]">
