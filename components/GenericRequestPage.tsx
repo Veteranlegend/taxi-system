@@ -7,6 +7,7 @@ import { PriceEstimationService } from "@/services/priceEstimationService";
 import { PriceEstimateViewModelMapper } from "@/viewModels/priceEstimateViewModel";
 import { GenericRequestViewModelMapper } from "@/viewModels/genericRequestViewModel";
 import { useLanguage } from "@/contexts/LanguageContext";
+import LocationSearch from "@/components/ui/LocationSearch";
 
 export default function GenericRequestPage() {
   const locations = PriceEstimationService.getLocations();
@@ -93,30 +94,24 @@ export default function GenericRequestPage() {
           <div className="mt-7 flex flex-col gap-6">
             <div>
               <label className="mb-2 block text-sm font-semibold text-slate-700">{t.from}</label>
-              <select
+              <LocationSearch
                 value={fromId}
-                onChange={(e) => setFromId(e.target.value)}
-                className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3.5 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:ring-3 focus:ring-sky-100"
-              >
-                <option value="">{t.selectPickupLocation}</option>
-                {locations.map((l) => (
-                  <option key={l.id} value={l.id}>{l.label}</option>
-                ))}
-              </select>
+                onChange={(id) => setFromId(id)}
+                locations={locations}
+                placeholder={t.selectPickupLocation}
+                excludeId={toId}
+              />
             </div>
 
             <div>
               <label className="mb-2 block text-sm font-semibold text-slate-700">{t.to}</label>
-              <select
+              <LocationSearch
                 value={toId}
-                onChange={(e) => setToId(e.target.value)}
-                className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3.5 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:ring-3 focus:ring-sky-100"
-              >
-                <option value="">{t.selectDestinationOption}</option>
-                {locations.filter((l) => l.id !== fromId).map((l) => (
-                  <option key={l.id} value={l.id}>{l.label}</option>
-                ))}
-              </select>
+                onChange={(id) => setToId(id)}
+                locations={locations}
+                placeholder={t.selectDestinationOption}
+                excludeId={fromId}
+              />
             </div>
 
             {/* Location — compact inline */}
