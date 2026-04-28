@@ -604,25 +604,25 @@ function classifyTrip(from: PricingLocation, to: PricingLocation): TripType {
 
 const PRICING_CONFIG = {
   local: {
-    base: 5,
-    ratePerKm: 0.80,
-    minFare: 7,
+    base: 3,
+    ratePerKm: 0.55,
+    minFare: 5,
     rangePct: 0.20,
-    minMargin: 3,
+    minMargin: 2,
   },
   intercity: {
-    base: 5,
-    ratePerKm: 0.70,
-    minFare: 20,
+    base: 4,
+    ratePerKm: 0.34,
+    minFare: 10,
     rangePct: 0.15,
-    minMargin: 5,
+    minMargin: 4,
   },
   airport: {
-    base: 15,
-    ratePerKm: 0.60,
-    minFare: 35,
-    rangePct: 0.13,
-    minMargin: 8,
+    base: 20,
+    ratePerKm: 0.29,
+    minFare: 30,
+    rangePct: 0.12,
+    minMargin: 6,
   },
 } as const;
 
