@@ -237,6 +237,25 @@ export default function HubPageLayout({
                     </svg>
                     {t.trustPills[2]}
                   </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.05] px-3 py-1.5 text-[11px] font-bold tracking-tight text-white/95 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-md">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" className="h-3 w-3 shrink-0 text-emerald-400" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M12 21c-4.5-1-8-5.5-8-10V5l8-3 8 3v6c0 4.5-3.5 9-8 10z" />
+                    </svg>
+                    {t.safeTrustedRide}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.05] px-3 py-1.5 text-[11px] font-bold tracking-tight text-white/95 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-md">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" className="h-3 w-3 shrink-0 text-amber-400" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
+                    </svg>
+                    {t.cashOrWhish}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.05] px-3 py-1.5 text-[11px] font-bold tracking-tight text-white/95 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-md">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" className="h-3 w-3 shrink-0 text-rose-300" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                    {t.gpsTracked}
+                  </span>
                 </div>
 
                 {heroSlot ? (

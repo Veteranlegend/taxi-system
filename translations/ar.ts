@@ -32,6 +32,9 @@ const ar: Translations = {
     "أسعار شفافة",
     "متاح 24/7",
   ],
+  safeTrustedRide: "رحلة آمنة وموثوقة",
+  cashOrWhish: "كاش أو Whish",
+  gpsTracked: "تتبع GPS للأمان",
 
   // How it works
   howItWorksLabel: "كيف يعمل",

@@ -30,6 +30,9 @@ const en = {
     "Transparent pricing",
     "Available 24/7",
   ],
+  safeTrustedRide: "Safe & trusted ride",
+  cashOrWhish: "Cash or Whish",
+  gpsTracked: "GPS-tracked for safety",
 
   // How it works
   howItWorksLabel: "How it works",
