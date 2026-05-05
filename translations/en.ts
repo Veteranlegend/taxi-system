@@ -32,6 +32,8 @@ const en = {
   ],
 
   // How it works
+  planYourTripLabel: "Plan your trip",
+  planYourTripIntro: "Get an instant fare estimate — no commitment, just transparency.",
   howItWorksLabel: "How it works",
   steps: [
     { title: "Choose your area", body: "Pick the service page that matches your trip or pickup zone." },

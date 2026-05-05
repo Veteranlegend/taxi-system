@@ -33,6 +33,9 @@ const ar: Translations = {
     "متاح 24/7",
   ],
 
+  planYourTripLabel: "خطّط رحلتك",
+  planYourTripIntro: "احصل على تقدير فوري للسعر — بدون التزام، بكل شفافية.",
+
   // How it works
   howItWorksLabel: "كيف يعمل",
   steps: [
