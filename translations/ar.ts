@@ -35,6 +35,7 @@ const ar: Translations = {
   safeTrustedRide: "رحلة آمنة وموثوقة",
   cashOrWhish: "كاش أو Whish",
   gpsTracked: "تتبع GPS للأمان",
+  callNow: "اتصل الآن",
 
   // How it works
   howItWorksLabel: "كيف يعمل",

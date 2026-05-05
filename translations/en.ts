@@ -33,6 +33,7 @@ const en = {
   safeTrustedRide: "Safe & trusted ride",
   cashOrWhish: "Cash or Whish",
   gpsTracked: "GPS-tracked for safety",
+  callNow: "Call now",
 
   // How it works
   howItWorksLabel: "How it works",
