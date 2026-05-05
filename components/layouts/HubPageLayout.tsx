@@ -14,6 +14,7 @@ type HubPageLayoutProps = {
   description: string;
   children: ReactNode;
   beforeSection?: ReactNode;
+  heroSlot?: ReactNode;
 };
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -27,6 +28,7 @@ export default function HubPageLayout({
   description,
   children,
   beforeSection,
+  heroSlot,
 }: HubPageLayoutProps) {
   const { t, isArabic } = useLanguage();
   const defaultMsg = isArabic
@@ -214,13 +216,17 @@ export default function HubPageLayout({
                   <span className="text-xs font-semibold text-white/90">{t.available24_7}</span>
                 </div>
 
-                <div className="mt-7 grid grid-cols-2 gap-2">
-                  {t.trustPills.map((label) => (
-                    <span key={label} className="rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/90 backdrop-blur-sm">
-                      {label}
-                    </span>
-                  ))}
-                </div>
+                {heroSlot ? (
+                  <div className="mt-8">{heroSlot}</div>
+                ) : (
+                  <div className="mt-7 grid grid-cols-2 gap-2">
+                    {t.trustPills.map((label) => (
+                      <span key={label} className="rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/90 backdrop-blur-sm">
+                        {label}
+                      </span>
+                    ))}
+                  </div>
+                )}
 
               </div>
             </div>

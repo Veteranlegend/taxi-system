@@ -35,7 +35,7 @@ export default function PriceEstimator({
   }, [fromId, toId, lang]);
 
   return (
-    <div className="rounded-[1.75rem] border border-sky-100 bg-sky-50/40 p-5 shadow-sm sm:p-6">
+    <div className="rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-[0_12px_40px_rgba(15,23,42,0.18)] sm:p-6">
       <div className="flex items-start justify-between gap-4">
         <div>
           <h2 className="text-xl font-bold text-slate-900">{t.priceEstimateTitle}</h2>

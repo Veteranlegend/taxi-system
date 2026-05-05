@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useId } from "react";
 import type { PricingLocation } from "@/types/pricing";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 type Props = {
   value: string;
@@ -18,22 +19,30 @@ export default function LocationSearch({
   placeholder,
   excludeId,
 }: Props) {
+  const { isArabic } = useLanguage();
+  const displayLabel = (l: PricingLocation) => (isArabic ? l.labelAr : l.label);
+
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const listId = useId();
 
-  const selectedLabel = locations.find((l) => l.id === value)?.label ?? "";
+  const selectedLocation = locations.find((l) => l.id === value);
+  const selectedLabel = selectedLocation ? displayLabel(selectedLocation) : "";
 
+  const q = query.trim().toLowerCase();
   const filtered = locations
     .filter((l) => l.id !== excludeId)
     .filter(
       (l) =>
-        !query.trim() ||
-        l.label.toLowerCase().includes(query.toLowerCase())
+        !q ||
+        l.label.toLowerCase().includes(q) ||
+        l.labelAr.toLowerCase().includes(q)
     )
-    .sort((a, b) => a.label.localeCompare(b.label));
+    .sort((a, b) =>
+      displayLabel(a).localeCompare(displayLabel(b), isArabic ? "ar" : "en")
+    );
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -117,14 +126,14 @@ export default function LocationSearch({
                 key={l.id}
                 role="option"
                 aria-selected={l.id === value}
-                onMouseDown={() => handleSelect(l.id, l.label)}
+                onMouseDown={() => handleSelect(l.id, displayLabel(l))}
                 className={`cursor-pointer px-4 py-2.5 text-sm transition ${
                   l.id === value
                     ? "bg-sky-50 font-semibold text-sky-700"
                     : "text-slate-700 hover:bg-sky-50 hover:text-sky-700"
                 }`}
               >
-                {l.label}
+                {displayLabel(l)}
               </li>
             ))
           )}

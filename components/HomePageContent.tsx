@@ -27,17 +27,7 @@ export default function HomePageContent() {
     <HubPageLayout
       title="Direct Taxi Lebanon"
       description={t.heroDescription}
-      beforeSection={
-        <section className="mb-12 px-2">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
-            {t.planYourTripLabel}
-          </p>
-          <p className="mb-6 text-sm text-slate-500">
-            {t.planYourTripIntro}
-          </p>
-          <PriceEstimator />
-        </section>
-      }
+      heroSlot={<PriceEstimator />}
     >
 
       {/* HOW IT WORKS */}

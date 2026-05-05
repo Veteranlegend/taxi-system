@@ -1,6 +1,7 @@
 export type PricingLocation = {
   id: string;
   label: string;
+  labelAr: string;
   lat: number;
   lng: number;
   isAirport: boolean;

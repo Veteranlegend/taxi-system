@@ -42,13 +42,14 @@ export default function GenericRequestPage() {
     const to = PriceEstimationService.getLocationById(toId);
     if (!from || !to) return { priceEstimateVm: null, requestVm: null };
 
+    const isAr = lang === "ar";
     const pVm = PriceEstimateViewModelMapper.toViewModel(
       PriceEstimationService.estimate(from, to),
       lang
     );
     const rVm = GenericRequestViewModelMapper.toViewModel({
-      fromLabel: from.label,
-      toLabel: to.label,
+      fromLabel: isAr ? from.labelAr : from.label,
+      toLabel: isAr ? to.labelAr : to.label,
       estimatedRange: pVm.rangeLabel,
       note: note.trim() || undefined,
       pickupLink: pickupLink || undefined,
@@ -56,7 +57,7 @@ export default function GenericRequestPage() {
     });
 
     return { priceEstimateVm: pVm, requestVm: rVm };
-  }, [fromId, toId, note, pickupLink]);
+  }, [fromId, toId, note, pickupLink, lang]);
 
   return (
     <LandingPageLayout
