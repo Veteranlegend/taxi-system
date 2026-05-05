@@ -182,22 +182,25 @@ export default function HubPageLayout({
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-b from-[#2EE372] to-[#1FB855] px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(37,211,102,0.35),inset_0_1px_0_rgba(255,255,255,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(37,211,102,0.5),inset_0_1px_0_rgba(255,255,255,0.3)] active:translate-y-0 active:shadow-[0_4px_16px_rgba(37,211,102,0.4)]"
+                    className="group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full bg-gradient-to-br from-[#34E478] via-[#22C55E] to-[#15803D] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(37,211,102,0.45),inset_0_1px_0_rgba(255,255,255,0.4),inset_0_-1px_0_rgba(0,0,0,0.15)] ring-1 ring-white/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(37,211,102,0.65),inset_0_1px_0_rgba(255,255,255,0.5),inset_0_-1px_0_rgba(0,0,0,0.2)] active:translate-y-0"
                   >
-                    <WhatsAppIcon className="h-4 w-4" />
-                    {t.bookViaWhatsApp}
+                    <span className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/25 to-transparent" />
+                    <WhatsAppIcon className="relative h-4 w-4" />
+                    <span className="relative">{t.bookViaWhatsApp}</span>
                   </a>
                   <ScrollSaveLink
                     href="/price-estimate"
-                    className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/[0.08] px-6 py-3 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_4px_16px_rgba(0,0,0,0.12)] backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-white/50 hover:bg-white/[0.16] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_8px_24px_rgba(0,0,0,0.18)]"
+                    className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-white/40 bg-white/[0.10] px-7 py-3.5 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_8px_24px_rgba(0,0,0,0.18)] ring-1 ring-white/10 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/60 hover:bg-white/[0.18] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_14px_32px_rgba(0,0,0,0.25)]"
                   >
-                    {t.getPriceEstimate}
+                    <span className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/15 to-transparent" />
+                    <span className="relative">{t.getPriceEstimate}</span>
                   </ScrollSaveLink>
                   <ScrollSaveLink
                     href="/beirut-airport-taxi"
-                    className="inline-flex items-center gap-2 rounded-full border border-sky-300/50 bg-sky-500/[0.18] px-6 py-3 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(186,230,253,0.25),0_4px_16px_rgba(14,165,233,0.18)] backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-300/70 hover:bg-sky-500/[0.28] hover:shadow-[inset_0_1px_0_rgba(186,230,253,0.3),0_8px_24px_rgba(14,165,233,0.28)]"
+                    className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-sky-300/60 bg-gradient-to-br from-sky-400/30 to-sky-600/20 px-7 py-3.5 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(186,230,253,0.35),0_8px_24px_rgba(14,165,233,0.28)] ring-1 ring-sky-300/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-sky-300/80 hover:from-sky-400/40 hover:to-sky-600/30 hover:shadow-[inset_0_1px_0_rgba(186,230,253,0.45),0_14px_32px_rgba(14,165,233,0.4)]"
                   >
-                    ✈ {isArabic ? "تاكسي المطار" : "Airport Taxi"}
+                    <span className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/15 to-transparent" />
+                    <span className="relative">✈ {isArabic ? "تاكسي المطار" : "Airport Taxi"}</span>
                   </ScrollSaveLink>
                 </div>
 
