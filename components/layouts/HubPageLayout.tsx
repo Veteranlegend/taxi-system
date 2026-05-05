@@ -201,7 +201,7 @@ export default function HubPageLayout({
                   </ScrollSaveLink>
                 </div>
 
-                <div className="mt-5 flex items-center gap-2">
+                <div className="mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1.5">
                   <a
                     href="tel:+96170452864"
                     dir="ltr"
@@ -212,8 +212,14 @@ export default function HubPageLayout({
                     </svg>
                     +961 70 452 864
                   </a>
-                  <span className="text-white/60">·</span>
+                  <span className="text-white/40">·</span>
                   <span className="text-xs font-semibold text-white/90">{t.available24_7}</span>
+                  <span className="text-white/40">·</span>
+                  <span className="text-xs font-semibold text-white/90">{t.trustPills[0]}</span>
+                  <span className="text-white/40">·</span>
+                  <span className="text-xs font-semibold text-white/90">{t.trustPills[1]}</span>
+                  <span className="text-white/40">·</span>
+                  <span className="text-xs font-semibold text-white/90">{t.trustPills[2]}</span>
                 </div>
 
                 {heroSlot ? (
