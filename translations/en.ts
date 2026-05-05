@@ -26,7 +26,7 @@ const en = {
   // Hero trust pills
   trustPills: [
     "15+ years experience",
-    "On-time, every time",
+    "Clean & comfortable cars",
     "Transparent pricing",
     "Available 24/7",
   ],
