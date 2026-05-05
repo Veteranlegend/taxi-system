@@ -8,6 +8,7 @@ import ScrollSaveLink from "@/components/ui/ScrollSaveLink";
 import ScrollRestorer from "@/components/ScrollRestorer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
+import PriceEstimator from "@/components/PriceEstimator";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ZONE_PAGE_LIST } from "@/constants/zonePages";
 
@@ -26,6 +27,7 @@ export default function HomePageContent() {
     <HubPageLayout
       title="Direct Taxi Lebanon"
       description={t.heroDescription}
+      beforeSection={<PriceEstimator />}
     >
 
       {/* HOW IT WORKS */}

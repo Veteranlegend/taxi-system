@@ -13,6 +13,7 @@ type HubPageLayoutProps = {
   title: string;
   description: string;
   children: ReactNode;
+  beforeSection?: ReactNode;
 };
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -25,6 +26,7 @@ export default function HubPageLayout({
   title,
   description,
   children,
+  beforeSection,
 }: HubPageLayoutProps) {
   const { t, isArabic } = useLanguage();
   const defaultMsg = isArabic
@@ -224,6 +226,8 @@ export default function HubPageLayout({
             </div>
           </div>
         </header>
+
+        {beforeSection}
 
         <PageSection title={t.chooseServiceArea}>
           {children}
