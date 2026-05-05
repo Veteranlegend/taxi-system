@@ -177,25 +177,25 @@ export default function HubPageLayout({
                   </svg>
                 </p>
 
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-8 flex flex-wrap gap-2.5">
                   <a
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2.5 rounded-full bg-[#1FA855] px-7 py-3.5 text-sm font-semibold tracking-tight text-white shadow-[0_6px_18px_rgba(31,168,85,0.35),inset_0_1px_0_rgba(255,255,255,0.18)] transition-all duration-300 hover:bg-[#22B559] hover:shadow-[0_10px_26px_rgba(31,168,85,0.45),inset_0_1px_0_rgba(255,255,255,0.22)] hover:-translate-y-0.5 active:translate-y-0"
+                    className="inline-flex items-center gap-2.5 rounded-2xl bg-emerald-600 px-6 py-3 text-[13px] font-semibold tracking-tight text-white shadow-[0_4px_12px_rgba(5,150,105,0.3),inset_0_1px_0_rgba(255,255,255,0.15)] transition-all duration-300 hover:bg-emerald-700 hover:shadow-[0_8px_22px_rgba(5,150,105,0.42),inset_0_1px_0_rgba(255,255,255,0.2)] hover:-translate-y-0.5"
                   >
                     <WhatsAppIcon className="h-4 w-4" />
                     {t.bookViaWhatsApp}
                   </a>
                   <ScrollSaveLink
                     href="/price-estimate"
-                    className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/[0.06] px-7 py-3.5 text-sm font-medium tracking-tight text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-md transition-all duration-300 hover:border-white/40 hover:bg-white/[0.12] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_8px_22px_rgba(0,0,0,0.15)] hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-2 rounded-2xl border border-white/20 bg-white/[0.07] px-6 py-3 text-[13px] font-medium tracking-tight text-white/95 backdrop-blur-xl transition-all duration-300 hover:border-white/35 hover:bg-white/[0.14] hover:text-white hover:-translate-y-0.5"
                   >
                     {t.getPriceEstimate}
                   </ScrollSaveLink>
                   <ScrollSaveLink
                     href="/beirut-airport-taxi"
-                    className="inline-flex items-center gap-2 rounded-full border border-sky-300/40 bg-sky-500/[0.12] px-7 py-3.5 text-sm font-medium tracking-tight text-white shadow-[inset_0_1px_0_rgba(186,230,253,0.18)] backdrop-blur-md transition-all duration-300 hover:border-sky-300/60 hover:bg-sky-500/[0.20] hover:shadow-[inset_0_1px_0_rgba(186,230,253,0.28),0_8px_22px_rgba(14,165,233,0.22)] hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-2 rounded-2xl border border-sky-300/35 bg-sky-500/10 px-6 py-3 text-[13px] font-medium tracking-tight text-white/95 backdrop-blur-xl transition-all duration-300 hover:border-sky-300/55 hover:bg-sky-500/[0.18] hover:text-white hover:-translate-y-0.5"
                   >
                     ✈ {isArabic ? "تاكسي المطار" : "Airport Taxi"}
                   </ScrollSaveLink>
