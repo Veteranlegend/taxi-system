@@ -2,6 +2,8 @@ import { MetadataRoute } from "next";
 
 const BASE_URL = "https://www.directtaxilebanon.com";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
