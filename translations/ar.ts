@@ -6,7 +6,6 @@ const ar: Translations = {
   available24_7: "متاح 24/7",
   backToAllAreas: "العودة إلى جميع المناطق",
   sendRequestOnWhatsApp: "أرسل الطلب عبر واتساب",
-  approximate: "تقريبي",
   recommended: "موصى به",
   shareLocation: "شارك موقعك",
   helpsDriver: "يساعد السائق على إيجادك بسهولة.",
@@ -18,8 +17,7 @@ const ar: Translations = {
   selectDestination: "اختر الوجهة",
   yourWhatsappMessage: "رسالتك على واتساب",
   addNote: "أضف ملاحظة... (مثلاً: ٢ ركاب، أمتعة، استلام في الصباح الباكر)",
-  getPriceEstimate: "احصل على تقدير السعر ←",
-  checkPrice: "تحقق من السعر ←",
+  requestRide: "اطلب رحلة ←",
   callToConfirm: "اتصل للتأكيد",
 
   // Hero
@@ -53,8 +51,8 @@ const ar: Translations = {
     { title: "كل شيء مؤكد كتابياً", body: "وقت الاستلام والموقع والسعر كلها تُتفق عليها عبر واتساب قبل الرحلة — بلا مفاجآت." },
   ],
 
-  // Price bar
-  priceBarText: "غير متأكد من السعر؟ احصل على تقدير مجاني أولاً.",
+  // Request bar
+  requestBarText: "جاهز للانطلاق؟ أرسل تفاصيل رحلتك وسنؤكدها عبر واتساب.",
 
   // Service areas
   chooseServiceArea: "اختر منطقة الخدمة",
@@ -69,7 +67,7 @@ const ar: Translations = {
   // Other areas card
   allOfLebanon: "كل لبنان",
   otherAreas: "مناطق أخرى",
-  otherAreasDescription: "لست في هذه المدن؟ يمكنك طلب رحلة من أي مكان في لبنان — احصل على تقدير السعر وأرسل طلبك مباشرة.",
+  otherAreasDescription: "لست في هذه المدن؟ يمكنك طلب رحلة من أي مكان في لبنان — اختر مسارك وأرسل طلبك مباشرة.",
   requestFromLocation: "اطلب من موقعك",
 
   // Zone page titles & descriptions
@@ -128,30 +126,25 @@ const ar: Translations = {
     },
   ],
 
-  // Price estimator
-  priceEstimateTitle: "تقدير السعر",
-  priceEstimateSubtitle: "نطاق تقريبي قبل التواصل.",
+  // Route selector
+  routeSelectorTitle: "خطط رحلتك",
+  routeSelectorSubtitle: "اختر نقطة الانطلاق والوجهة.",
   prebookTitle: "احجز هذه الرحلة مسبقاً",
   prebookDescription: "لجدولة هذه الرحلة مسبقاً، اتصل لتأكيد التاريخ والوقت والتوفر. تُتفق التفاصيل النهائية عبر الهاتف.",
 
-  // Price estimate page
-  priceEstimatePage: "تقدير السعر",
-  priceEstimatePageDescription: "اختر موقع الانطلاق والوجهة للحصول على نطاق سعر تقريبي. بدون أي التزام — فقط تقدير صادق قبل أن تقرر التواصل.",
-
   // Request page
   requestTitle: "اطلب رحلة",
-  requestDescription: "اختر نقطة الانطلاق والوجهة للحصول على تقدير سعر تقريبي، ثم أرسل طلبك مباشرة عبر واتساب.",
+  requestDescription: "اختر نقطة الانطلاق والوجهة، ثم أرسل طلبك مباشرة عبر واتساب.",
   tripDetails: "تفاصيل الرحلة",
-  tripDetailsSubtitle: "اختر مسارك لرؤية السعر وتحضير طلبك.",
+  tripDetailsSubtitle: "اختر مسارك لتحضير طلبك.",
   anyArea: "أي منطقة",
   selectRouteTitle: "اختر مسارك",
-  selectRouteDescription: "اختر نقطة الانطلاق والوجهة لرؤية السعر وإرسال طلبك.",
-  priceAndRequest: "تقدير السعر والطلب",
+  selectRouteDescription: "اختر نقطة الانطلاق والوجهة لتحضير طلبك وإرساله.",
   selectPickupLocation: "اختر نقطة الانطلاق",
   selectDestinationOption: "اختر الوجهة",
   trustBarItems: [
     "حجز مباشر عبر واتساب",
-    "السعر يظهر قبل التواصل",
+    "يُؤكَّد مع السائق",
     "تغطية جميع مناطق لبنان",
     "متاح 24/7",
   ],
@@ -165,7 +158,7 @@ const ar: Translations = {
   footerAvailability: "لبنان · متاح 24/7",
   footerServiceItems: [
     { label: "رحلات المطار", href: "/#service-areas" },
-    { label: "رحلات بين المدن", href: "/price-estimate" },
+    { label: "رحلات بين المدن", href: "/request" },
     { label: "جولات خاصة", href: "/#private-tours" },
     { label: "رحلات ليلية", href: "/#service-areas" },
     { label: "حجز في نفس اليوم", href: "/request" },

@@ -1,0 +1,3 @@
+# The public price estimator was removed — prices are agreed directly with the
+# driver on WhatsApp. Keep the old URL working for existing ads and backlinks.
+/price-estimate  /request  301

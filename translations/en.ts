@@ -4,7 +4,6 @@ const en = {
   available24_7: "Available 24/7",
   backToAllAreas: "Back to all areas",
   sendRequestOnWhatsApp: "Send request on WhatsApp",
-  approximate: "Approximate",
   recommended: "recommended",
   shareLocation: "Share your location",
   helpsDriver: "Helps the driver find you with no confusion.",
@@ -16,8 +15,7 @@ const en = {
   selectDestination: "Select destination",
   yourWhatsappMessage: "Your WhatsApp message",
   addNote: "Add a note... (e.g. 2 passengers, luggage, early morning pickup)",
-  getPriceEstimate: "Get price estimate →",
-  checkPrice: "Check price →",
+  requestRide: "Request a ride →",
   callToConfirm: "Call to confirm",
 
   // Hero
@@ -51,8 +49,8 @@ const en = {
     { title: "Everything confirmed in writing", body: "Pickup time, location, and price are all agreed on WhatsApp before the trip — no surprises." },
   ],
 
-  // Price bar
-  priceBarText: "Not sure about the price? Get a free estimate first.",
+  // Request bar
+  requestBarText: "Ready to travel? Send your trip details and we'll confirm on WhatsApp.",
 
   // Service areas
   chooseServiceArea: "Choose Your Service Area",
@@ -67,7 +65,7 @@ const en = {
   // Other areas card
   allOfLebanon: "All of Lebanon",
   otherAreas: "Other areas",
-  otherAreasDescription: "Not in these cities? You can still request a ride from anywhere in Lebanon — get a price estimate and send your request directly.",
+  otherAreasDescription: "Not in these cities? You can still request a ride from anywhere in Lebanon — choose your route and send your request directly.",
   requestFromLocation: "Request from your location",
 
   // Zone page titles & descriptions
@@ -126,30 +124,25 @@ const en = {
     },
   ],
 
-  // Price estimator
-  priceEstimateTitle: "Price estimate",
-  priceEstimateSubtitle: "Approximate range before contacting.",
+  // Route selector
+  routeSelectorTitle: "Plan your ride",
+  routeSelectorSubtitle: "Select your pickup and destination.",
   prebookTitle: "Pre-book this ride",
   prebookDescription: "To schedule this trip in advance, call to confirm the date, time, and availability. Final details are agreed on the call.",
 
-  // Price estimate page
-  priceEstimatePage: "Price Estimate",
-  priceEstimatePageDescription: "Select your pickup location and destination to get an approximate price range. No commitment — just an honest estimate before you decide to contact.",
-
   // Request page
   requestTitle: "Request a Ride",
-  requestDescription: "Select your pickup and destination to get an approximate price, then send your request directly via WhatsApp.",
+  requestDescription: "Select your pickup and destination, then send your request directly via WhatsApp.",
   tripDetails: "Trip details",
-  tripDetailsSubtitle: "Select your route to see a price and prepare your request.",
+  tripDetailsSubtitle: "Select your route to prepare your request.",
   anyArea: "Any area",
   selectRouteTitle: "Select your route",
-  selectRouteDescription: "Choose a pickup and destination to see the price and send your request.",
-  priceAndRequest: "Price estimate & request",
+  selectRouteDescription: "Choose a pickup and destination to prepare and send your request.",
   selectPickupLocation: "Select pickup location",
   selectDestinationOption: "Select destination",
   trustBarItems: [
     "Direct WhatsApp booking",
-    "Price shown before contacting",
+    "Confirmed with the driver",
     "All of Lebanon covered",
     "Available 24/7",
   ],
@@ -163,7 +156,7 @@ const en = {
   footerAvailability: "Lebanon · Available 24/7",
   footerServiceItems: [
     { label: "Airport transfers", href: "/#service-areas" },
-    { label: "Intercity rides", href: "/price-estimate" },
+    { label: "Intercity rides", href: "/request" },
     { label: "Private tours", href: "/#private-tours" },
     { label: "Night rides", href: "/#service-areas" },
     { label: "Same-day bookings", href: "/request" },

@@ -1,49 +1,54 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { PriceEstimationService } from "@/services/priceEstimationService";
-import { PriceEstimateViewModelMapper } from "@/viewModels/priceEstimateViewModel";
+import { LocationService } from "@/services/locationService";
+import { GenericRequestViewModelMapper } from "@/viewModels/genericRequestViewModel";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LocationSearch from "@/components/ui/LocationSearch";
+import { WhatsAppCTAButton } from "@/components/ui/WhatsAppCTAButton";
 
-type PriceEstimatorProps = {
+type RouteSelectorProps = {
   defaultFromId?: string;
   defaultToId?: string;
-  continuePath?: string;
   onDestinationChange?: (label: string) => void;
+  /** Render a WhatsApp request button once a full route is selected. */
+  withRequestCta?: boolean;
 };
 
-export default function PriceEstimator({
+export default function RouteSelector({
   defaultFromId,
   defaultToId,
   onDestinationChange,
-}: PriceEstimatorProps) {
-  const locations = PriceEstimationService.getLocations();
+  withRequestCta = false,
+}: RouteSelectorProps) {
+  const locations = LocationService.getLocations();
   const [fromId, setFromId] = useState(defaultFromId ?? "");
   const [toId, setToId] = useState(defaultToId ?? "");
   const { t, lang } = useLanguage();
 
-  const vm = useMemo(() => {
+  const route = useMemo(() => {
     if (!fromId || !toId || fromId === toId) return null;
-    const from = PriceEstimationService.getLocationById(fromId);
-    const to = PriceEstimationService.getLocationById(toId);
+    const from = LocationService.getLocationById(fromId);
+    const to = LocationService.getLocationById(toId);
     if (!from || !to) return null;
-    return PriceEstimateViewModelMapper.toViewModel(
-      PriceEstimationService.estimate(from, to),
-      lang
-    );
-  }, [fromId, toId, lang]);
+    return { from, to };
+  }, [fromId, toId]);
+
+  const requestVm = useMemo(() => {
+    if (!withRequestCta || !route) return null;
+    const isAr = lang === "ar";
+    return GenericRequestViewModelMapper.toViewModel({
+      fromLabel: isAr ? route.from.labelAr : route.from.label,
+      toLabel: isAr ? route.to.labelAr : route.to.label,
+      lang,
+    });
+  }, [withRequestCta, route, lang]);
 
   return (
     <div className="rounded-[1.75rem] border border-white/30 bg-white/55 p-5 shadow-[0_20px_60px_rgba(15,23,42,0.35)] backdrop-blur-2xl sm:p-6">
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <h2 className="text-xl font-bold text-slate-900">{t.priceEstimateTitle}</h2>
-          <p className="mt-1 text-sm text-slate-500">{t.priceEstimateSubtitle}</p>
-        </div>
-        <div className="hidden rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-600 sm:block">
-          {t.approximate}
-        </div>
+      <div>
+        <h2 className="text-xl font-bold text-slate-900">{t.routeSelectorTitle}</h2>
+        <p className="mt-1 text-sm text-slate-500">{t.routeSelectorSubtitle}</p>
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -73,18 +78,13 @@ export default function PriceEstimator({
         </div>
       </div>
 
-      {vm && (
+      {route && (
         <>
-          <div className="mt-5 rounded-2xl border border-sky-200/80 bg-white px-4 py-4 shadow-sm">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <span className={`rounded-full border px-3 py-1 text-xs font-semibold ${vm.tripTypeBadgeStyle}`}>
-                {vm.tripTypeLabel}
-              </span>
-              <p className="text-2xl font-bold tracking-tight text-slate-900">{vm.rangeLabel}</p>
+          {requestVm && (
+            <div className="mt-5">
+              <WhatsAppCTAButton href={requestVm.whatsappUrl} />
             </div>
-            <p className="mt-2 text-xs text-slate-500">{vm.distanceLabel}</p>
-            <p className="mt-3 text-xs leading-5 text-slate-500">{vm.disclaimer}</p>
-          </div>
+          )}
 
           <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50/80 p-4">
             <p className="text-sm font-semibold text-slate-900">{t.prebookTitle}</p>

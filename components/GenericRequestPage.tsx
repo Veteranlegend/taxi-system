@@ -3,14 +3,13 @@
 import { useMemo, useState } from "react";
 import LandingPageLayout from "@/components/layouts/LandingPageLayout";
 import { WhatsAppCTAButton } from "@/components/ui/WhatsAppCTAButton";
-import { PriceEstimationService } from "@/services/priceEstimationService";
-import { PriceEstimateViewModelMapper } from "@/viewModels/priceEstimateViewModel";
+import { LocationService } from "@/services/locationService";
 import { GenericRequestViewModelMapper } from "@/viewModels/genericRequestViewModel";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LocationSearch from "@/components/ui/LocationSearch";
 
 export default function GenericRequestPage() {
-  const locations = PriceEstimationService.getLocations();
+  const locations = LocationService.getLocations();
   const { t, lang } = useLanguage();
 
   const [fromId, setFromId] = useState("");
@@ -34,29 +33,21 @@ export default function GenericRequestPage() {
     );
   };
 
-  const { priceEstimateVm, requestVm } = useMemo(() => {
-    if (!fromId || !toId || fromId === toId) {
-      return { priceEstimateVm: null, requestVm: null };
-    }
-    const from = PriceEstimationService.getLocationById(fromId);
-    const to = PriceEstimationService.getLocationById(toId);
-    if (!from || !to) return { priceEstimateVm: null, requestVm: null };
+  const requestVm = useMemo(() => {
+    if (!fromId || !toId || fromId === toId) return null;
+
+    const from = LocationService.getLocationById(fromId);
+    const to = LocationService.getLocationById(toId);
+    if (!from || !to) return null;
 
     const isAr = lang === "ar";
-    const pVm = PriceEstimateViewModelMapper.toViewModel(
-      PriceEstimationService.estimate(from, to),
-      lang
-    );
-    const rVm = GenericRequestViewModelMapper.toViewModel({
+    return GenericRequestViewModelMapper.toViewModel({
       fromLabel: isAr ? from.labelAr : from.label,
       toLabel: isAr ? to.labelAr : to.label,
-      estimatedRange: pVm.rangeLabel,
       note: note.trim() || undefined,
       pickupLink: pickupLink || undefined,
       lang,
     });
-
-    return { priceEstimateVm: pVm, requestVm: rVm };
   }, [fromId, toId, note, pickupLink, lang]);
 
   return (
@@ -137,7 +128,7 @@ export default function GenericRequestPage() {
           </div>
         </div>
 
-        {/* Right: estimate + WhatsApp */}
+        {/* Right: request preview + WhatsApp */}
         <div>
           {!requestVm ? (
             <div className="flex flex-col items-center justify-center gap-4 rounded-[1.75rem] border border-dashed border-slate-200 bg-white/60 p-10 text-center shadow-sm">
@@ -154,30 +145,8 @@ export default function GenericRequestPage() {
           ) : (
             <div className="rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-[0_8px_28px_rgba(15,23,42,0.07)] sm:p-6">
 
-              {/* Price estimate */}
-              {priceEstimateVm && (
-                <div className="rounded-2xl border border-sky-100 bg-sky-50/60 p-4">
-                  <div className="flex flex-wrap items-center justify-between gap-3">
-                    <span
-                      className={`rounded-full border px-3 py-1 text-xs font-semibold ${priceEstimateVm.tripTypeBadgeStyle}`}
-                    >
-                      {priceEstimateVm.tripTypeLabel}
-                    </span>
-                    <p className="text-2xl font-bold tracking-tight text-slate-900">
-                      {priceEstimateVm.rangeLabel}
-                    </p>
-                  </div>
-                  <p className="mt-1.5 text-xs text-slate-500">
-                    {priceEstimateVm.distanceLabel}
-                  </p>
-                  <p className="mt-2 text-xs leading-5 text-slate-500">
-                    {priceEstimateVm.disclaimer}
-                  </p>
-                </div>
-              )}
-
               {/* Message preview + integrated note */}
-              <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
                 <div className="px-4 pt-4 pb-3">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
                     {t.yourWhatsappMessage}

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import LandingPageLayout from "@/components/layouts/LandingPageLayout";
-import PriceEstimator from "@/components/PriceEstimator";
+import RouteSelector from "@/components/RouteSelector";
 import { WhatsAppCTAButton } from "@/components/ui/WhatsAppCTAButton";
 import { ZoneSlug } from "@/types/zoneSlug";
 import { ZoneService } from "@/services/zoneService";
@@ -70,8 +70,8 @@ export default function ZoneLandingPage({
     <LandingPageLayout title={translatedTitle} description={translatedDescription} image={image}>
       <div className="grid gap-5 lg:grid-cols-2">
 
-        {/* Price estimator */}
-        <PriceEstimator
+        {/* Route selector */}
+        <RouteSelector
           defaultFromId={slug}
           onDestinationChange={(label) => setDestinationCity(label)}
         />

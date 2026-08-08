@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useRef, useEffect, useId } from "react";
-import type { PricingLocation } from "@/types/pricing";
+import type { TaxiLocation } from "@/types/location";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 type Props = {
   value: string;
   onChange: (id: string, label: string) => void;
-  locations: PricingLocation[];
+  locations: TaxiLocation[];
   placeholder: string;
   excludeId?: string;
 };
@@ -20,7 +20,7 @@ export default function LocationSearch({
   excludeId,
 }: Props) {
   const { isArabic } = useLanguage();
-  const displayLabel = (l: PricingLocation) => (isArabic ? l.labelAr : l.label);
+  const displayLabel = (l: TaxiLocation) => (isArabic ? l.labelAr : l.label);
 
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);

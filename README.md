@@ -16,8 +16,8 @@ The system supports airport transfers, intercity rides, and private tours across
 
 ## Features
 
-- **WhatsApp booking flow** — pre-filled messages with zone, destination, notes and price estimate
-- **Price estimator** — distance-based fare calculator with route lookup
+- **WhatsApp booking flow** — pre-filled messages with zone, destination and notes
+- **Route selector** — pickup/destination lookup across 300+ Lebanese locations
 - **Arabic / English** — full bilingual support with RTL layout switching
 - **Zone-based routing** — each city has its own landing page and booking flow
 - **SEO optimised** — 100/100 SEO on PageSpeed Insights, FAQPage JSON-LD schema, per-page OpenGraph images
@@ -42,7 +42,7 @@ The system supports airport transfers, intercity rides, and private tours across
 ## Architecture
 
 ```
-config/          — static data (zones, prices, routes)
+config/          — static data (zones, routes)
 constants/       — routes, WhatsApp message templates
 types/           — shared TypeScript types
 services/        — business logic (zone lookup, WhatsApp URL builder)
@@ -65,7 +65,6 @@ Strict separation of concerns: no business logic in components, no direct config
 | `/tripoli-taxi` | Tripoli zone landing page |
 | `/batroun-taxi` | Batroun zone landing page |
 | `/airport-transfer-north-lebanon` | Airport transfer hub for North Lebanon |
-| `/price-estimate` | Standalone fare estimator |
 | `/request` | Generic ride request form |
 
 ---

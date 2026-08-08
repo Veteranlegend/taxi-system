@@ -8,7 +8,7 @@ import ScrollSaveLink from "@/components/ui/ScrollSaveLink";
 import ScrollRestorer from "@/components/ScrollRestorer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
-import PriceEstimator from "@/components/PriceEstimator";
+import RouteSelector from "@/components/RouteSelector";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ZONE_PAGE_LIST } from "@/constants/zonePages";
 
@@ -27,7 +27,7 @@ export default function HomePageContent() {
     <HubPageLayout
       title="Direct Taxi Lebanon"
       description={t.heroDescription}
-      heroSlot={<PriceEstimator />}
+      heroSlot={<RouteSelector withRequestCta />}
     >
 
       {/* HOW IT WORKS */}
@@ -74,12 +74,12 @@ export default function HomePageContent() {
         </div>
 
         <div className="mt-8 flex items-center justify-between gap-4 border-t border-b border-slate-200 pt-8 pb-8 mb-14">
-          <p className="text-sm text-slate-500">{t.priceBarText}</p>
+          <p className="text-sm text-slate-500">{t.requestBarText}</p>
           <ScrollSaveLink
-            href="/price-estimate"
+            href="/request"
             className="shrink-0 inline-flex items-center gap-1.5 rounded-full bg-sky-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-800"
           >
-            {t.checkPrice}
+            {t.requestRide}
           </ScrollSaveLink>
         </div>
       </div>

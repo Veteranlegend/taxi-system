@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import LandingPageLayout from "@/components/layouts/LandingPageLayout";
-import PriceEstimator from "@/components/PriceEstimator";
+import RouteSelector from "@/components/RouteSelector";
 import { WhatsAppCTAButton } from "@/components/ui/WhatsAppCTAButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
@@ -39,10 +39,10 @@ export default function BeirutAirportTaxiContent() {
     >
       <div className="space-y-10">
 
-        {/* Price estimator + booking card */}
+        {/* Route selector + booking card */}
         <div className="grid gap-5 lg:grid-cols-2">
 
-          <PriceEstimator
+          <RouteSelector
             defaultToId="airport"
             onDestinationChange={(label) => setDestinationCity(label)}
           />

@@ -13,7 +13,6 @@ type ZoneInquiryOptions = {
 export type GenericInquiryOptions = {
   fromLabel: string;
   toLabel: string;
-  estimatedRange?: string;
   note?: string;
   pickupLink?: string;
   lang?: string;
@@ -84,12 +83,6 @@ export class WhatsAppMessageService {
         : `\nPickup location: ${options.pickupLink}`
       : "";
 
-    const estimateLine = options.estimatedRange
-      ? isAr
-        ? `\nالسعر المقدر: ${options.estimatedRange}`
-        : `\nEstimated price: ${options.estimatedRange}`
-      : "";
-
     const noteLine = options.note
       ? isAr
         ? `\nملاحظة: ${options.note}`
@@ -100,12 +93,10 @@ export class WhatsAppMessageService {
       ? `مرحباً، أود طلب تاكسي.\n\nمن: ${options.fromLabel}` +
           pickupLinkLine +
           `\nإلى: ${options.toLabel}` +
-          estimateLine +
           noteLine
       : `Hi, I would like to request a taxi.\n\nFrom: ${options.fromLabel}` +
           pickupLinkLine +
           `\nTo: ${options.toLabel}` +
-          estimateLine +
           noteLine;
   }
 }

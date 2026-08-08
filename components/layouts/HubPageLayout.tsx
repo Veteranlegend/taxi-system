@@ -188,10 +188,10 @@ export default function HubPageLayout({
                     {t.bookViaWhatsApp}
                   </a>
                   <ScrollSaveLink
-                    href="/price-estimate"
+                    href="/request"
                     className="inline-flex items-center gap-2 rounded-xl border border-amber-300 bg-gradient-to-b from-amber-300 to-amber-500 px-6 py-3 text-sm font-bold tracking-tight text-slate-900 shadow-[0_6px_18px_rgba(245,158,11,0.5),inset_0_1px_0_rgba(255,255,255,0.45)] ring-1 ring-amber-900/15 transition-all duration-300 hover:from-amber-200 hover:to-amber-400 hover:shadow-[0_10px_26px_rgba(245,158,11,0.65),inset_0_1px_0_rgba(255,255,255,0.55)] hover:-translate-y-0.5"
                   >
-                    {t.getPriceEstimate}
+                    {t.requestRide}
                   </ScrollSaveLink>
                   <ScrollSaveLink
                     href="/beirut-airport-taxi"
