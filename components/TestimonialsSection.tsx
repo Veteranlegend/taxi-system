@@ -18,13 +18,6 @@ const testimonials = [
     quoteAr: "استخدمت هذه الخدمة لرحلة يوم كامل في شمال لبنان. السائق كان يعرف أفضل الأماكن وجعل التجربة بأكملها خالية من التوتر. أنصح به بشدة.",
   },
   {
-    name: "Karim H.",
-    location: "Tripoli",
-    avatar: "https://i.pravatar.cc/96?img=57",
-    quote: "I've used this taxi service multiple times now for intercity rides. Always reliable, fair pricing, and quick responses. It's my go-to option in Lebanon.",
-    quoteAr: "استخدمت خدمة التاكسي هذه عدة مرات للرحلات بين المدن. دائماً موثوق، أسعار عادلة، وردود سريعة. هو خياري الأول في لبنان.",
-  },
-  {
     name: "Lina A.",
     location: "Batroun",
     avatar: "https://i.pravatar.cc/96?img=44",
