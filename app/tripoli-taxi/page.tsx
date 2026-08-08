@@ -5,7 +5,7 @@ import { ZONE_PAGES } from "@/constants/zonePages";
 export const metadata: Metadata = {
   title: "Tripoli Taxi — Airport Transfers & Intercity Rides from Tripoli",
   description:
-    "Book a taxi from Tripoli, Lebanon via WhatsApp. Airport transfers to Beirut, intercity rides, and private tours. Fast reply, fair prices, available 24/7.",
+    "Book a taxi from Tripoli, Lebanon via WhatsApp. Airport transfers to Beirut, intercity rides, and private tours. Fast reply, available 24/7.",
   alternates: { canonical: "https://www.directtaxilebanon.com/tripoli-taxi" },
   openGraph: {
     title: "Tripoli Taxi — Airport Transfers & Intercity Rides from Tripoli",

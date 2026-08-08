@@ -4,7 +4,7 @@ import BeirutAirportTaxiContent from "@/components/BeirutAirportTaxiContent";
 export const metadata: Metadata = {
   title: "Beirut Airport Taxi | Fast WhatsApp Booking",
   description:
-    "Book a reliable Beirut airport taxi via WhatsApp. 24/7 service for airport pickups and drop-offs across Lebanon. Fixed pricing, no hidden fees.",
+    "Book a reliable Beirut airport taxi via WhatsApp. 24/7 service for airport pickups and drop-offs across Lebanon. Fast confirmation on WhatsApp.",
   alternates: { canonical: "https://www.directtaxilebanon.com/beirut-airport-taxi" },
   openGraph: {
     title: "Beirut Airport Taxi | Fast WhatsApp Booking",

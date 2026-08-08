@@ -5,7 +5,7 @@ import { ZONE_PAGES } from "@/constants/zonePages";
 export const metadata: Metadata = {
   title: "Batroun Taxi — Airport Transfers & Rides from Batroun",
   description:
-    "Book a taxi from Batroun, Lebanon via WhatsApp. Airport transfers, intercity rides to Beirut and Tripoli, available 24/7 at fair prices.",
+    "Book a taxi from Batroun, Lebanon via WhatsApp. Airport transfers, intercity rides to Beirut and Tripoli, available 24/7.",
   alternates: { canonical: "https://www.directtaxilebanon.com/batroun-taxi" },
   openGraph: {
     title: "Batroun Taxi — Airport Transfers & Rides from Batroun",

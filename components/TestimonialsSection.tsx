@@ -39,13 +39,6 @@ const testimonials = [
     quoteAr: "احتجت إلى رحلة في وقت متأخر من الليل ولم أكن متأكداً مما أتوقعه، لكن كل شيء سار بشكل مثالي. رد سريع ورحلة آمنة ومريحة.",
   },
   {
-    name: "Nadine S.",
-    location: "Jounieh",
-    avatar: "https://i.pravatar.cc/96?img=45",
-    quote: "The price was exactly within the estimate I got before booking, which I really appreciated. No surprises, just a smooth ride.",
-    quoteAr: "كان السعر ضمن التقدير الذي حصلت عليه قبل الحجز، وهذا ما أقدرته كثيراً. بلا مفاجآت، فقط رحلة سلسة.",
-  },
-  {
     name: "Alex T.",
     location: "UK",
     avatar: "https://i.pravatar.cc/96?img=8",

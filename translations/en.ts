@@ -25,7 +25,7 @@ const en = {
   trustPills: [
     "15+ years experience",
     "Clean & comfortable cars",
-    "Transparent pricing",
+    "Clear communication",
     "Available 24/7",
   ],
   safeTrustedRide: "Safe & trusted ride",
@@ -83,7 +83,7 @@ const en = {
   // Private tours
   privateToursBadge: "Private transportation & guided tours",
   privateToursTitle: "Explore Lebanon with a trusted local driver",
-  privateToursDescription: "With more than 15 years of experience, we offer full-day and multi-day private transportation across Lebanon — from the north coast to the Bekaa Valley. All at fair, transparent prices with no hidden fees.",
+  privateToursDescription: "With more than 15 years of experience, we offer full-day and multi-day private transportation across Lebanon — from the north coast to the Bekaa Valley. Tell us your plans and we'll arrange the details with you directly.",
   idealFor: "Ideal for",
   idealForItems: [
     "Tourists exploring Lebanon",
@@ -174,7 +174,7 @@ const en = {
   jbeilBenefitsLabel: "Why book with us",
   jbeilBenefits: [
     { title: "Airport Transfers", body: "Direct rides between Jbeil and Beirut Rafic Hariri International Airport." },
-    { title: "Fixed Pricing", body: "Know your price before you travel — no hidden fees, no surprises." },
+    { title: "Easy Booking", body: "Confirm your trip directly on WhatsApp — clear details, no surprises." },
     { title: "Reliable Drivers", body: "15+ years of experience serving travelers across Lebanon." },
     { title: "Available 24/7", body: "Early pickups, late arrivals — we're always on time." },
   ] as { title: string; body: string }[],
@@ -196,7 +196,7 @@ const en = {
   airportBenefitsLabel: "Why book with us",
   airportBenefits: [
     { title: "Airport Transfers", body: "Reliable pickups and drop-offs at Beirut Rafic Hariri Airport." },
-    { title: "Fixed Pricing", body: "Know your price before you travel — no hidden fees, no surprises." },
+    { title: "Easy Booking", body: "Confirm your trip directly on WhatsApp — clear details, no surprises." },
     { title: "Reliable Drivers", body: "15+ years of experience serving travelers across Lebanon." },
     { title: "Available 24/7", body: "Early flights, late arrivals — we're always on time." },
   ] as { title: string; body: string }[],
